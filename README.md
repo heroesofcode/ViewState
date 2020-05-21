@@ -1,6 +1,6 @@
 # ViewState
 
-View State of API results using Alamofire and JSON
+View State of API results using Alamofire and SwiftyJSON
 
 ## How to use?
 
