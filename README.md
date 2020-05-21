@@ -1,5 +1,6 @@
 # ViewState
 
+[![Swift Version](https://img.shields.io/badge/Swift-5.0.x-orange.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
 
 View State of API results using Alamofire and SwiftyJSON
