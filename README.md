@@ -76,5 +76,5 @@ func fetchMovie() -> ViewState<[Movie]> {
 
 Coded by João Lucas
 
-## Licensed
-Licensed under the [MIT License](LICENCE).
+## License
+Licensed under the [MIT License](LICENSE).
