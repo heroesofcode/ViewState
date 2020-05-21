@@ -57,7 +57,7 @@ class ViewState<T> {
 func fetchMovie() -> ViewState<[Movie]> {
         self.viewState.loading()
         
-        service.getApiInventory(
+        service.getApiMovie(
             onSuccess: { (resultArray) in
                 self.movieArray = MovieMapper(resultArray: resultArray).transform()
                 self.viewState.success(data: self.movieArray)
