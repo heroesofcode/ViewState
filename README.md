@@ -69,6 +69,16 @@ func fetchMovie() -> ViewState<[Movie]> {
         return viewState
 }
 ```
+- In the ViewController it calls the ViewModel method and places the states of each one.
+
+``` swift
+private func setupFetchMovie() {
+     viewModel.fetchMovie()
+         .successObserver(onSuccess)
+         .loadingObserver(onLoading)
+         .errorObserver(onError)
+}
+```
 
 ## Sample Project
 
