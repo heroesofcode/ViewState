@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C51627882476395600E9B3BA /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51627872476395600E9B3BA /* ViewState.swift */; };
+		C548093824801A63001DA3C3 /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C548093724801A63001DA3C3 /* ObserverProtocol.swift */; };
+		C548093A24801A82001DA3C3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C548093924801A82001DA3C3 /* Observable.swift */; };
 		C5FF81F12476384400E6F151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF81F02476384400E6F151 /* AppDelegate.swift */; };
 		C5FF81F32476384400E6F151 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF81F22476384400E6F151 /* SceneDelegate.swift */; };
 		C5FF81F52476384400E6F151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FF81F42476384400E6F151 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 		67DE7C7B491B9C134211811A /* Pods-ViewState.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewState.release.xcconfig"; path = "Target Support Files/Pods-ViewState/Pods-ViewState.release.xcconfig"; sourceTree = "<group>"; };
 		87B80ED540CA97A84B839EA0 /* Pods-ViewState.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewState.debug.xcconfig"; path = "Target Support Files/Pods-ViewState/Pods-ViewState.debug.xcconfig"; sourceTree = "<group>"; };
 		C51627872476395600E9B3BA /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		C548093724801A63001DA3C3 /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
+		C548093924801A82001DA3C3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C5FF81ED2476384400E6F151 /* ViewState.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewState.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FF81F02476384400E6F151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5FF81F22476384400E6F151 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				C51627872476395600E9B3BA /* ViewState.swift */,
+				C548093724801A63001DA3C3 /* ObserverProtocol.swift */,
+				C548093924801A82001DA3C3 /* Observable.swift */,
 			);
 			path = ViewState;
 			sourceTree = "<group>";
@@ -217,9 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C548093824801A63001DA3C3 /* ObserverProtocol.swift in Sources */,
 				C5FF81F52476384400E6F151 /* ViewController.swift in Sources */,
 				C5FF81F12476384400E6F151 /* AppDelegate.swift in Sources */,
 				C51627882476395600E9B3BA /* ViewState.swift in Sources */,
+				C548093A24801A82001DA3C3 /* Observable.swift in Sources */,
 				C5FF81F32476384400E6F151 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
