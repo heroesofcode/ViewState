@@ -19,12 +19,12 @@ public class ViewState<T, E> : ObserverProtocol{
     
     private var fetchSourceBehavior: () -> Void = {}
     
-    init() {
+    public init() {
         observerRequest()
     }
     
     @discardableResult
-    func successObserver(_ success: @escaping (T) -> Void) -> ViewState {
+    public func successObserver(_ success: @escaping (T) -> Void) -> ViewState {
         
         self.successBehavior.addObserver(self) { data in
             success(data)
@@ -37,7 +37,7 @@ public class ViewState<T, E> : ObserverProtocol{
     }
     
     @discardableResult
-    func loadingObserver(_ loading: @escaping () -> Void) -> ViewState {
+    public func loadingObserver(_ loading: @escaping () -> Void) -> ViewState {
         self.loadingBehavior.addObserver(self) { _ in
             loading()
         }
@@ -49,7 +49,7 @@ public class ViewState<T, E> : ObserverProtocol{
     }
     
     @discardableResult
-    func errorObserver(_ error: @escaping (E) -> Void) -> ViewState {
+    public func errorObserver(_ error: @escaping (E) -> Void) -> ViewState {
         self.errorBehavior.addObserver(self) { aferror in
             error(aferror)
         }
@@ -60,7 +60,7 @@ public class ViewState<T, E> : ObserverProtocol{
         return self
     }
     
-    func fetchSource(_ request: @escaping () -> Void) {
+    public func fetchSource(_ request: @escaping () -> Void) {
         self.fetchSourceBehavior = request
     }
     
@@ -75,23 +75,23 @@ public class ViewState<T, E> : ObserverProtocol{
         }
     }
     
-    func success(data: T) {
+    public func success(data: T) {
         self.successBehavior.value = data
     }
     
-    func loading() {
+    public func loading() {
         self.loadingBehavior.value = {}
     }
     
-    func error(error: E) {
+    public func error(error: E) {
         self.errorBehavior.value = error
     }
     
-    func onValueChanged(_ value: Any?) {
+    public func onValueChanged(_ value: Any?) {
         //empty
     }
     
-    func verifyMakeRequest() {
+    public func verifyMakeRequest() {
         if successObserved &&
             loadingObserved &&
             errorObserved {
