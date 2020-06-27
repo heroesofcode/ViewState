@@ -1,4 +1,6 @@
-# ViewState
+<p align="center">
+    <img src="https://github.com/joaolfp/ViewState/blob/master/logo/logo.png">
+</p>
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.0.x-orange.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
