@@ -26,8 +26,8 @@ func fetchMovie() -> ViewState<[Movie], AFError?> {
             })
         }
 
-        return viewState
-    }
+      return viewState
+}
 ```
 - In the ViewController it calls the ViewModel method and places the states of each one.
 
@@ -38,7 +38,9 @@ private func setupFetchMovie() {
           .loadingObserver(onLoading)
           .errorObserver(onError)
 }
-    
+```
+
+``` swift
 private func onSuccess(movie: [Movie]) {
       self.collection.reloadData()
       alert.dismiss(animated: true, completion: nil)
