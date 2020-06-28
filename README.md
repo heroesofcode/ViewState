@@ -63,6 +63,36 @@ private func onError(message: AFError?) {
 }
 ```
 
+## Installation
+
+### Swift Package Manager
+
+```swift
+import ViewState
+```
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.0.3"))
+]
+```
+
+### Cocoapods
+
+```swift
+import ViewStateKit
+```
+
+```ruby
+target '<Your Target Name>' do
+  pod 'ViewStateKit'
+end
+```
+
+```bash
+$ pod install
+```
+
 ## Author
 Coded by João Lucas
 
