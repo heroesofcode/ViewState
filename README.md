@@ -3,8 +3,9 @@
 </p>
 
 [![Swift Version](https://img.shields.io/badge/Swift-5.0.x-orange.svg)]()
-![Cocoapods compatible](https://img.shields.io/cocoapods/v/ViewStateKit.svg)](https://cocoapods.org/pods/ViewStateKit)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
+[![Cocoapods compatible](https://img.shields.io/cocoapods/v/ViewStateKit.svg)](https://cocoapods.org/pods/ViewStateKit)
+[![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager)
+[![License](https://img.shields.io/github/license/joaolfp/ViewState.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
 
 ## Overview
 
