@@ -97,12 +97,9 @@
 		C5F9EF89256795D5005EA18A /* Sample */ = {
 			isa = PBXGroup;
 			children = (
-				C5F9EF8A256795D5005EA18A /* AppDelegate.swift */,
-				C5F9EF8C256795D5005EA18A /* SceneDelegate.swift */,
-				C5F9EF93256795D6005EA18A /* Assets.xcassets */,
-				C5F9EF95256795D6005EA18A /* LaunchScreen.storyboard */,
-				C5F9EF98256795D6005EA18A /* Info.plist */,
-				C5F9EFC02567971F005EA18A /* ProfileViewController.swift */,
+				C5F9EFC52567996F005EA18A /* Application */,
+				C5F9EFCD2567998C005EA18A /* Profile */,
+				C5F9EFCC25679983005EA18A /* SupportingFiles */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -123,6 +120,33 @@
 				C5F9EFAE256795D7005EA18A /* Info.plist */,
 			);
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		C5F9EFC52567996F005EA18A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9EF8A256795D5005EA18A /* AppDelegate.swift */,
+				C5F9EF8C256795D5005EA18A /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		C5F9EFCC25679983005EA18A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9EF93256795D6005EA18A /* Assets.xcassets */,
+				C5F9EF95256795D6005EA18A /* LaunchScreen.storyboard */,
+				C5F9EF98256795D6005EA18A /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		C5F9EFCD2567998C005EA18A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9EFC02567971F005EA18A /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Sample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sample/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,7 +467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Sample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sample/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
