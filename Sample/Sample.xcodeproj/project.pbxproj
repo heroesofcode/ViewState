@@ -16,6 +16,19 @@
 		C5F9EFA2256795D7005EA18A /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFA1256795D7005EA18A /* SampleTests.swift */; };
 		C5F9EFAD256795D7005EA18A /* SampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFAC256795D7005EA18A /* SampleUITests.swift */; };
 		C5F9EFC12567971F005EA18A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFC02567971F005EA18A /* ProfileViewController.swift */; };
+		C5F9EFE625679D87005EA18A /* HTTPClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFE525679D87005EA18A /* HTTPClientProtocol.swift */; };
+		C5F9EFEB25679D94005EA18A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFEA25679D94005EA18A /* HTTPClient.swift */; };
+		C5F9EFF125679DC8005EA18A /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFF025679DC7005EA18A /* HTTPError.swift */; };
+		C5F9EFF625679E29005EA18A /* HTTPScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFF525679E29005EA18A /* HTTPScheme.swift */; };
+		C5F9EFFB25679E3C005EA18A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFFA25679E3C005EA18A /* HTTPMethod.swift */; };
+		C5F9F00025679E5D005EA18A /* HTTPStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9EFFF25679E5D005EA18A /* HTTPStatusCode.swift */; };
+		C5F9F00625679EB1005EA18A /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F00525679EB1005EA18A /* EndpointProtocol.swift */; };
+		C5F9F00C25679EEA005EA18A /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F00B25679EEA005EA18A /* URL+Utils.swift */; };
+		C5F9F01425679F2E005EA18A /* Parameters+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F01325679F2E005EA18A /* Parameters+Utils.swift */; };
+		C5F9F01925679FAE005EA18A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F01825679FAE005EA18A /* Endpoint.swift */; };
+		C5F9F01F2567A06F005EA18A /* MyGithubServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F01E2567A06F005EA18A /* MyGithubServiceProtocol.swift */; };
+		C5F9F02D2567A19B005EA18A /* MyGithubDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F02C2567A19B005EA18A /* MyGithubDTO.swift */; };
+		C5F9F0322567A247005EA18A /* MyGithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0312567A247005EA18A /* MyGithubService.swift */; };
 		EF36C0DD5E45F275F9165ED9 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +69,19 @@
 		C5F9EFAC256795D7005EA18A /* SampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUITests.swift; sourceTree = "<group>"; };
 		C5F9EFAE256795D7005EA18A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5F9EFC02567971F005EA18A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C5F9EFE525679D87005EA18A /* HTTPClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientProtocol.swift; sourceTree = "<group>"; };
+		C5F9EFEA25679D94005EA18A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		C5F9EFF025679DC7005EA18A /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		C5F9EFF525679E29005EA18A /* HTTPScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPScheme.swift; sourceTree = "<group>"; };
+		C5F9EFFA25679E3C005EA18A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		C5F9EFFF25679E5D005EA18A /* HTTPStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatusCode.swift; sourceTree = "<group>"; };
+		C5F9F00525679EB1005EA18A /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		C5F9F00B25679EEA005EA18A /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
+		C5F9F01325679F2E005EA18A /* Parameters+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Parameters+Utils.swift"; sourceTree = "<group>"; };
+		C5F9F01825679FAE005EA18A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C5F9F01E2567A06F005EA18A /* MyGithubServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubServiceProtocol.swift; sourceTree = "<group>"; };
+		C5F9F02C2567A19B005EA18A /* MyGithubDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubDTO.swift; sourceTree = "<group>"; };
+		C5F9F0312567A247005EA18A /* MyGithubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubService.swift; sourceTree = "<group>"; };
 		DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2C5C2BBD6D2BEABBA81F /* Pods-Sample-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Sample-SampleUITests/Pods-Sample-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C9E6FA391DB5DD9C7BAD72 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,7 +164,9 @@
 			isa = PBXGroup;
 			children = (
 				C5F9EFC52567996F005EA18A /* Application */,
-				C5F9EFCD2567998C005EA18A /* Profile */,
+				C5F9F0232567A165005EA18A /* Model */,
+				C5F9EFE325679C88005EA18A /* Network */,
+				C5F9EFCD2567998C005EA18A /* Controller */,
 				C5F9EFCC25679983005EA18A /* SupportingFiles */,
 			);
 			path = Sample;
@@ -181,12 +209,79 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		C5F9EFCD2567998C005EA18A /* Profile */ = {
+		C5F9EFCD2567998C005EA18A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				C5F9EFC02567971F005EA18A /* ProfileViewController.swift */,
 			);
-			path = Profile;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C5F9EFE325679C88005EA18A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F01D2567A05D005EA18A /* Service */,
+				C5F9F00A25679ED4005EA18A /* Extensions */,
+				C5F9F00425679E8B005EA18A /* Endpoint */,
+				C5F9EFEF25679DBC005EA18A /* WebService */,
+				C5F9EFE425679D76005EA18A /* Client */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C5F9EFE425679D76005EA18A /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9EFE525679D87005EA18A /* HTTPClientProtocol.swift */,
+				C5F9EFEA25679D94005EA18A /* HTTPClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		C5F9EFEF25679DBC005EA18A /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9EFF025679DC7005EA18A /* HTTPError.swift */,
+				C5F9EFF525679E29005EA18A /* HTTPScheme.swift */,
+				C5F9EFFA25679E3C005EA18A /* HTTPMethod.swift */,
+				C5F9EFFF25679E5D005EA18A /* HTTPStatusCode.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		C5F9F00425679E8B005EA18A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F00525679EB1005EA18A /* EndpointProtocol.swift */,
+				C5F9F01825679FAE005EA18A /* Endpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		C5F9F00A25679ED4005EA18A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F00B25679EEA005EA18A /* URL+Utils.swift */,
+				C5F9F01325679F2E005EA18A /* Parameters+Utils.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C5F9F01D2567A05D005EA18A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F01E2567A06F005EA18A /* MyGithubServiceProtocol.swift */,
+				C5F9F0312567A247005EA18A /* MyGithubService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C5F9F0232567A165005EA18A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F02C2567A19B005EA18A /* MyGithubDTO.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,9 +540,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F9EFE625679D87005EA18A /* HTTPClientProtocol.swift in Sources */,
+				C5F9EFEB25679D94005EA18A /* HTTPClient.swift in Sources */,
+				C5F9F00625679EB1005EA18A /* EndpointProtocol.swift in Sources */,
+				C5F9F01925679FAE005EA18A /* Endpoint.swift in Sources */,
 				C5F9EFC12567971F005EA18A /* ProfileViewController.swift in Sources */,
+				C5F9F02D2567A19B005EA18A /* MyGithubDTO.swift in Sources */,
+				C5F9EFF625679E29005EA18A /* HTTPScheme.swift in Sources */,
+				C5F9F01425679F2E005EA18A /* Parameters+Utils.swift in Sources */,
+				C5F9EFFB25679E3C005EA18A /* HTTPMethod.swift in Sources */,
 				C5F9EF8B256795D5005EA18A /* AppDelegate.swift in Sources */,
+				C5F9F0322567A247005EA18A /* MyGithubService.swift in Sources */,
+				C5F9F00025679E5D005EA18A /* HTTPStatusCode.swift in Sources */,
+				C5F9EFF125679DC8005EA18A /* HTTPError.swift in Sources */,
 				C5F9EF8D256795D5005EA18A /* SceneDelegate.swift in Sources */,
+				C5F9F01F2567A06F005EA18A /* MyGithubServiceProtocol.swift in Sources */,
+				C5F9F00C25679EEA005EA18A /* URL+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
