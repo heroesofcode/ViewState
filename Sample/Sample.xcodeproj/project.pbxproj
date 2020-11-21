@@ -33,7 +33,7 @@
 		C5F9F05525681160005EA18A /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F05425681160005EA18A /* ViewCode.swift */; };
 		C5F9F05A256828A9005EA18A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F059256828A9005EA18A /* Constants.swift */; };
 		C5F9F0642569CA51005EA18A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */; };
-		C5F9F06D2569CC96005EA18A /* ProfileViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F06C2569CC96005EA18A /* ProfileViewModelFactory.swift */; };
+		C5F9F07F2569D3A4005EA18A /* ProfileViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */; };
 		EF36C0DD5E45F275F9165ED9 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +91,7 @@
 		C5F9F05425681160005EA18A /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		C5F9F059256828A9005EA18A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		C5F9F06C2569CC96005EA18A /* ProfileViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelFactory.swift; sourceTree = "<group>"; };
+		C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelProtocol.swift; sourceTree = "<group>"; };
 		DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2C5C2BBD6D2BEABBA81F /* Pods-Sample-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Sample-SampleUITests/Pods-Sample-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C9E6FA391DB5DD9C7BAD72 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,18 +317,18 @@
 		C5F9F0622569CA2D005EA18A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C5F9F06B2569CC84005EA18A /* Factory */,
+				C5F9F07D2569D375005EA18A /* Protocol */,
 				C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		C5F9F06B2569CC84005EA18A /* Factory */ = {
+		C5F9F07D2569D375005EA18A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				C5F9F06C2569CC96005EA18A /* ProfileViewModelFactory.swift */,
+				C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */,
 			);
-			path = Factory;
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -593,7 +593,6 @@
 				C5F9F00625679EB1005EA18A /* EndpointProtocol.swift in Sources */,
 				C5F9F01925679FAE005EA18A /* Endpoint.swift in Sources */,
 				C5F9EFC12567971F005EA18A /* ProfileViewController.swift in Sources */,
-				C5F9F06D2569CC96005EA18A /* ProfileViewModelFactory.swift in Sources */,
 				C5F9F02D2567A19B005EA18A /* MyGithubDTO.swift in Sources */,
 				C5F9EFF625679E29005EA18A /* HTTPScheme.swift in Sources */,
 				C5F9F01425679F2E005EA18A /* Parameters+Utils.swift in Sources */,
@@ -605,6 +604,7 @@
 				C5F9F0642569CA51005EA18A /* ProfileViewModel.swift in Sources */,
 				C5F9F00025679E5D005EA18A /* HTTPStatusCode.swift in Sources */,
 				C5F9EFF125679DC8005EA18A /* HTTPError.swift in Sources */,
+				C5F9F07F2569D3A4005EA18A /* ProfileViewModelProtocol.swift in Sources */,
 				C5F9EF8D256795D5005EA18A /* SceneDelegate.swift in Sources */,
 				C5F9F01F2567A06F005EA18A /* MyGithubServiceProtocol.swift in Sources */,
 				C5F9F00C25679EEA005EA18A /* URL+Utils.swift in Sources */,

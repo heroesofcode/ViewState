@@ -7,7 +7,7 @@
 
 import ViewStateKit
 
-class ProfileViewModel {
+class ProfileViewModel: ProfileViewModelProtocol {
     
     let service: MyGithubServiceProtocol
     var viewState: ViewState<MyGithubDTO, HTTPError>

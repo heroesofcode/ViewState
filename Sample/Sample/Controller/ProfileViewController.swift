@@ -10,7 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     let profileView = ProfileView()
-    var viewModel: ProfileViewModel!
+    var viewModel: ProfileViewModelProtocol!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -27,12 +27,7 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViewModel()
         setupFetchMyProfile()
-    }
-    
-    private func setupViewModel() {
-        viewModel = ProfileViewModelFactory().create()
     }
 }
 

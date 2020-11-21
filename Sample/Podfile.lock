@@ -1,20 +1,24 @@
 PODS:
   - SwiftLint (0.40.3)
+  - Swinject (2.7.1)
   - ViewStateKit (1.0.3)
 
 DEPENDENCIES:
   - SwiftLint
+  - Swinject
   - ViewStateKit
 
 SPEC REPOS:
   trunk:
     - SwiftLint
+    - Swinject
     - ViewStateKit
 
 SPEC CHECKSUMS:
   SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   ViewStateKit: 75f6c9c3062ab1f1c655a2ac6790d746def12734
 
-PODFILE CHECKSUM: 5c46527d48f74babd6b10849aee45da9cc0f6582
+PODFILE CHECKSUM: 446e2b8d8a30f65feb9636707075138211b07a65
 
 COCOAPODS: 1.10.0

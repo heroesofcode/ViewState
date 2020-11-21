@@ -6,17 +6,36 @@
 //
 
 import UIKit
+import Swinject
+import ViewStateKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    var container: Container = {
+        let container = Container()
+        container.register(MyGithubServiceProtocol.self) { _ in MyGithubService() }
+        container.register(ProfileViewModelProtocol.self) { r in
+            ProfileViewModel(
+                service: r.resolve(MyGithubServiceProtocol.self)!,
+                viewState: ViewState<MyGithubDTO, HTTPError>())
+        }
+        
+        container.register(ProfileViewController.self) { r in
+            let controller = ProfileViewController()
+            controller.viewModel = r.resolve(ProfileViewModelProtocol.self)
+            return controller
+        }
+        
+        return container
+    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let controller = ProfileViewController()
-        window?.rootViewController = controller
+        window?.rootViewController = container.resolve(ProfileViewController.self)
         window?.makeKeyAndVisible()
     }
 
