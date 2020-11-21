@@ -10,6 +10,7 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     let profileView = ProfileView()
+    var viewModel: ProfileViewModel!
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -26,14 +27,36 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MyGithubService().getMyGithub { [weak self] result in
-            switch result {
-            case.success(let myGithub):
-                print(myGithub.name)
-                print(myGithub.login)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        setupViewModel()
+        setupFetchMyProfile()
+    }
+    
+    private func setupViewModel() {
+        viewModel = ProfileViewModelFactory().create()
+    }
+}
+
+extension ProfileViewController {
+    
+    private func setupFetchMyProfile() {
+        viewModel.fetchMyProfile()
+            .successObserver(onSuccess)
+            .loadingObserver(onLoading)
+            .errorObserver(onError)
+    }
+    
+    private func onSuccess(myGithub: MyGithubDTO) {
+        profileView.name.text = myGithub.name
+        profileView.username.text = myGithub.login
+        profileView.bio.text = myGithub.bio
+        profileView.company.text = myGithub.company
+    }
+    
+    private func onLoading() {
+        print("Loading")
+    }
+    
+    private func onError(error: HTTPError) {
+        print("Vish, \(error)")
     }
 }

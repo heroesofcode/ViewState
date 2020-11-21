@@ -53,7 +53,7 @@ class ProfileView: UIView {
         return label
     }()
     
-    let iconCompany: UIImageView = {
+    private let iconCompany: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = UIImage(named: Constants.Images.company)
