@@ -10,5 +10,6 @@ import Foundation
 enum Constants {
     struct Images {
         static let company = "company"
+        static let loading = "loading"
     }
 }

@@ -21,7 +21,9 @@ class ProfileViewModel: ProfileViewModelProtocol {
         service.getMyGithub { [weak self] result in
             switch result {
                 case.success(let myGithub):
-                    self?.viewState.success(data: myGithub)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        self?.viewState.success(data: myGithub)
+                    }
                 case .failure(let error):
                     self?.viewState.error(error: error)
             }

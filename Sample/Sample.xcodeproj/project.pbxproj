@@ -34,6 +34,7 @@
 		C5F9F05A256828A9005EA18A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F059256828A9005EA18A /* Constants.swift */; };
 		C5F9F0642569CA51005EA18A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */; };
 		C5F9F07F2569D3A4005EA18A /* ProfileViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */; };
+		C5F9F0882569E880005EA18A /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0872569E880005EA18A /* LoadingStateView.swift */; };
 		EF36C0DD5E45F275F9165ED9 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +93,7 @@
 		C5F9F059256828A9005EA18A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelProtocol.swift; sourceTree = "<group>"; };
+		C5F9F0872569E880005EA18A /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
 		DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2C5C2BBD6D2BEABBA81F /* Pods-Sample-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Sample-SampleUITests/Pods-Sample-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C9E6FA391DB5DD9C7BAD72 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 		C5F9F053256810D9005EA18A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C5F9F0862569E867005EA18A /* ViewStates */,
 				C5F9F05425681160005EA18A /* ViewCode.swift */,
 				C5F9F059256828A9005EA18A /* Constants.swift */,
 			);
@@ -329,6 +332,14 @@
 				C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		C5F9F0862569E867005EA18A /* ViewStates */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0872569E880005EA18A /* LoadingStateView.swift */,
+			);
+			path = ViewStates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -590,6 +601,7 @@
 				C5F9EFE625679D87005EA18A /* HTTPClientProtocol.swift in Sources */,
 				C5F9F05A256828A9005EA18A /* Constants.swift in Sources */,
 				C5F9EFEB25679D94005EA18A /* HTTPClient.swift in Sources */,
+				C5F9F0882569E880005EA18A /* LoadingStateView.swift in Sources */,
 				C5F9F00625679EB1005EA18A /* EndpointProtocol.swift in Sources */,
 				C5F9F01925679FAE005EA18A /* Endpoint.swift in Sources */,
 				C5F9EFC12567971F005EA18A /* ProfileViewController.swift in Sources */,

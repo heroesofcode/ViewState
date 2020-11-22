@@ -45,10 +45,13 @@ extension ProfileViewController {
         profileView.username.text = myGithub.login
         profileView.bio.text = myGithub.bio
         profileView.company.text = myGithub.company
+        
+        self.view = profileView
     }
     
     private func onLoading() {
-        print("Loading")
+        let loadingView = LoadingStateView()
+        self.view = loadingView
     }
     
     private func onError(error: HTTPError) {
