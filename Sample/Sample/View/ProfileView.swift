@@ -33,6 +33,7 @@ class ProfileView: UIView {
         label.text = "João Lucas"
         label.textColor = .white
         label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.accessibilityIdentifier = "name-text"
         return label
     }()
     
@@ -42,6 +43,7 @@ class ProfileView: UIView {
         label.text = "joaolfp"
         label.textColor = .white
         label.font = UIFont.systemFont(ofSize: 17)
+        label.accessibilityIdentifier = "username-text"
         return label
     }()
     
