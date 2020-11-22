@@ -35,6 +35,12 @@
 		C5F9F0642569CA51005EA18A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */; };
 		C5F9F07F2569D3A4005EA18A /* ProfileViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */; };
 		C5F9F0882569E880005EA18A /* LoadingStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0872569E880005EA18A /* LoadingStateView.swift */; };
+		C5F9F0A02569F265005EA18A /* my-github.json in Resources */ = {isa = PBXBuildFile; fileRef = C5F9F09F2569F265005EA18A /* my-github.json */; };
+		C5F9F0A92569F376005EA18A /* HTTPClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0A82569F376005EA18A /* HTTPClientMock.swift */; };
+		C5F9F0B12569F3A1005EA18A /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0B02569F3A1005EA18A /* JSONHelper.swift */; };
+		C5F9F0B72569F425005EA18A /* ProfileStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0B62569F425005EA18A /* ProfileStateMock.swift */; };
+		C5F9F0D32569F96C005EA18A /* MyGithubServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0D22569F96C005EA18A /* MyGithubServiceSpec.swift */; };
+		C5F9F0E2256A0348005EA18A /* ProfileViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0E1256A0348005EA18A /* ProfileViewModelSpec.swift */; };
 		EF36C0DD5E45F275F9165ED9 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +100,12 @@
 		C5F9F0632569CA51005EA18A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		C5F9F07E2569D3A4005EA18A /* ProfileViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelProtocol.swift; sourceTree = "<group>"; };
 		C5F9F0872569E880005EA18A /* LoadingStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStateView.swift; sourceTree = "<group>"; };
+		C5F9F09F2569F265005EA18A /* my-github.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "my-github.json"; sourceTree = "<group>"; };
+		C5F9F0A82569F376005EA18A /* HTTPClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientMock.swift; sourceTree = "<group>"; };
+		C5F9F0B02569F3A1005EA18A /* JSONHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
+		C5F9F0B62569F425005EA18A /* ProfileStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStateMock.swift; sourceTree = "<group>"; };
+		C5F9F0D22569F96C005EA18A /* MyGithubServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubServiceSpec.swift; sourceTree = "<group>"; };
+		C5F9F0E1256A0348005EA18A /* ProfileViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelSpec.swift; sourceTree = "<group>"; };
 		DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2C5C2BBD6D2BEABBA81F /* Pods-Sample-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Sample-SampleUITests/Pods-Sample-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C9E6FA391DB5DD9C7BAD72 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +202,12 @@
 		C5F9EFA0256795D7005EA18A /* SampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				C5F9F09E2569F1BD005EA18A /* Common */,
+				C5F9F09D2569F1AF005EA18A /* Json */,
+				C5F9F09C2569F174005EA18A /* Controller */,
+				C5F9F09B2569F16B005EA18A /* Service */,
+				C5F9F09A2569F166005EA18A /* ViewModel */,
+				C5F9F0992569F161005EA18A /* Mock */,
 				C5F9EFA1256795D7005EA18A /* SampleTests.swift */,
 				C5F9EFA3256795D7005EA18A /* Info.plist */,
 			);
@@ -342,6 +360,70 @@
 			path = ViewStates;
 			sourceTree = "<group>";
 		};
+		C5F9F0992569F161005EA18A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0B52569F3E3005EA18A /* StatesMock */,
+				C5F9F0A72569F2E4005EA18A /* WebService */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		C5F9F09A2569F166005EA18A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0E1256A0348005EA18A /* ProfileViewModelSpec.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5F9F09B2569F16B005EA18A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0D22569F96C005EA18A /* MyGithubServiceSpec.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C5F9F09C2569F174005EA18A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C5F9F09D2569F1AF005EA18A /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F09F2569F265005EA18A /* my-github.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		C5F9F09E2569F1BD005EA18A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0B02569F3A1005EA18A /* JSONHelper.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C5F9F0A72569F2E4005EA18A /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0A82569F376005EA18A /* HTTPClientMock.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		C5F9F0B52569F3E3005EA18A /* StatesMock */ = {
+			isa = PBXGroup;
+			children = (
+				C5F9F0B62569F425005EA18A /* ProfileStateMock.swift */,
+			);
+			path = StatesMock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -460,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F9F0A02569F265005EA18A /* my-github.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +710,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F9F0B12569F3A1005EA18A /* JSONHelper.swift in Sources */,
+				C5F9F0B72569F425005EA18A /* ProfileStateMock.swift in Sources */,
+				C5F9F0A92569F376005EA18A /* HTTPClientMock.swift in Sources */,
 				C5F9EFA2256795D7005EA18A /* SampleTests.swift in Sources */,
+				C5F9F0D32569F96C005EA18A /* MyGithubServiceSpec.swift in Sources */,
+				C5F9F0E2256A0348005EA18A /* ProfileViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

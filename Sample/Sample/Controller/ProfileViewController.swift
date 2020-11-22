@@ -59,6 +59,6 @@ extension ProfileViewController {
     }
     
     private func onError(error: HTTPError) {
-        print("Vish, \(error)")
+        print("Vish, \(error.localizedDescription)")
     }
 }
