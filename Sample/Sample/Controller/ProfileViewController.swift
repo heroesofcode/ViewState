@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController {
     
@@ -41,6 +42,9 @@ extension ProfileViewController {
     }
     
     private func onSuccess(myGithub: MyGithubDTO) {
+        let url = URL(string: myGithub.avatar_url)
+        profileView.photo.kf.setImage(with: url)
+        
         profileView.name.text = myGithub.name
         profileView.username.text = myGithub.login
         profileView.bio.text = myGithub.bio

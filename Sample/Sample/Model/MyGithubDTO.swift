@@ -12,4 +12,5 @@ struct MyGithubDTO: Decodable {
     let name: String
     let company: String
     let bio: String
+    let avatar_url: String
 }

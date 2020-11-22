@@ -9,6 +9,7 @@ target 'Sample' do
   pod 'SwiftLint'
   pod 'ViewStateKit'
   pod 'Swinject'
+  pod 'Kingfisher'
 
   target 'SampleTests' do
     inherit! :search_paths
