@@ -41,6 +41,7 @@
 		C5F9F0B72569F425005EA18A /* ProfileStateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0B62569F425005EA18A /* ProfileStateMock.swift */; };
 		C5F9F0D32569F96C005EA18A /* MyGithubServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0D22569F96C005EA18A /* MyGithubServiceSpec.swift */; };
 		C5F9F0E2256A0348005EA18A /* ProfileViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0E1256A0348005EA18A /* ProfileViewModelSpec.swift */; };
+		C5F9F0E7256A0E5B005EA18A /* ProfileViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F9F0E6256A0E5B005EA18A /* ProfileViewControllerSpec.swift */; };
 		EF36C0DD5E45F275F9165ED9 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		C5F9F0B62569F425005EA18A /* ProfileStateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStateMock.swift; sourceTree = "<group>"; };
 		C5F9F0D22569F96C005EA18A /* MyGithubServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGithubServiceSpec.swift; sourceTree = "<group>"; };
 		C5F9F0E1256A0348005EA18A /* ProfileViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelSpec.swift; sourceTree = "<group>"; };
+		C5F9F0E6256A0E5B005EA18A /* ProfileViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewControllerSpec.swift; sourceTree = "<group>"; };
 		DEFD3FF1AFC446D5854E016E /* Pods_SampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CE2C5C2BBD6D2BEABBA81F /* Pods-Sample-SampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample-SampleUITests.release.xcconfig"; path = "Target Support Files/Pods-Sample-SampleUITests/Pods-Sample-SampleUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F6C9E6FA391DB5DD9C7BAD72 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		C5F9F09C2569F174005EA18A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C5F9F0E6256A0E5B005EA18A /* ProfileViewControllerSpec.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				C5F9F0B12569F3A1005EA18A /* JSONHelper.swift in Sources */,
 				C5F9F0B72569F425005EA18A /* ProfileStateMock.swift in Sources */,
 				C5F9F0A92569F376005EA18A /* HTTPClientMock.swift in Sources */,
+				C5F9F0E7256A0E5B005EA18A /* ProfileViewControllerSpec.swift in Sources */,
 				C5F9EFA2256795D7005EA18A /* SampleTests.swift in Sources */,
 				C5F9F0D32569F96C005EA18A /* MyGithubServiceSpec.swift in Sources */,
 				C5F9F0E2256A0348005EA18A /* ProfileViewModelSpec.swift in Sources */,
