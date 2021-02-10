@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MyGithubService: MyGithubServiceProtocol {
+final class MyGithubService: MyGithubServiceProtocol {
     
     private let client: HTTPClientProtocol
 
