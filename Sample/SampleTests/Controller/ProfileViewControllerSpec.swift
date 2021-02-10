@@ -10,21 +10,25 @@ import XCTest
 
 class ProfileViewControllerSpec: XCTestCase {
     
-    var controller: ProfileViewController!
+    var sut: ProfileViewController!
 
-    override func setUpWithError() throws {
-        controller = ProfileViewController()
+    override func setUp() {
+        super.setUp()
+        
+        sut = ProfileViewController()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        super.tearDown()
+        
+        sut = nil
     }
 
     func testShouldBeAbleToCreateAController() throws {
-        XCTAssertNotNil(controller)
+        XCTAssertNotNil(sut)
     }
     
     func testShouldHaveAViewOfType() throws {
-        XCTAssertNotNil(controller.profileView)
+        XCTAssertNotNil(sut.profileView)
     }
 }
