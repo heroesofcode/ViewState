@@ -11,21 +11,24 @@ import XCTest
 class MyGithubServiceSpec: XCTestCase {
     
     var client: HTTPClientMock!
-    var service: MyGithubService!
-
-    override func setUpWithError() throws {
+    var sut: MyGithubService!
+    
+    override func setUp() {
+        super.setUp()
+        
         client = HTTPClientMock()
-        service = MyGithubService(client: client)
+        sut = MyGithubService(client: client)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        client = nil
+        sut = nil
     }
 
-    func testVerifyGetMyGithubItemsWithSuccess() throws {
+    func testVerifyGetMyGithubItemsWithSuccess() {
         client.fileName = "my-github"
         
-        service.getMyGithub { result in
+        sut.getMyGithub { result in
             switch result {
                 case .success(let myGithub):
                     XCTAssertEqual("joaolfp", myGithub.login)

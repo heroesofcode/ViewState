@@ -12,31 +12,36 @@ import ViewStateKit
 class ProfileViewModelSpec: XCTestCase {
     
     var service: MyGithubService!
-    var viewModel: ProfileViewModel!
+    var sut: ProfileViewModel!
     var stateMock: ProfileStateMock!
-
-    override func setUpWithError() throws {
+    
+    override func setUp() {
+        super.setUp()
+        
         service = MyGithubService()
         stateMock = ProfileStateMock()
-        viewModel = ProfileViewModel(service: service,
+        sut = ProfileViewModel(service: service,
                                      viewState: ViewState<MyGithubDTO, HTTPError>())
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        service = nil
+        stateMock = nil
+        sut = nil
     }
 
     func testVerifyFetchMyGithubDataWithSuccess() throws {
-        viewModel.fetchMyProfile()
+        sut.fetchMyProfile()
             .successObserver(stateMock.onSuccess)
             .loadingObserver(stateMock.onLoading)
             .errorObserver(stateMock.onError)
         
-        let github = MyGithubDTO(
+        let github = MyGithubDTO.stub(
             login: "joaolfp",
             name: "João Lucas",
             company: "Company",
-            bio: "iOS Developer", avatar_url: "myavatar.com")
+            bio: "iOS Developer",
+            avatar_url: "myavatar.com")
         
         XCTAssertEqual("João Lucas", github.name)
     }
