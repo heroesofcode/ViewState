@@ -1,8 +1,6 @@
 PODS:
-  - Kingfisher (5.15.7):
-    - Kingfisher/Core (= 5.15.7)
-  - Kingfisher/Core (5.15.7)
-  - SwiftLint (0.40.3)
+  - Kingfisher (6.1.0)
+  - SwiftLint (0.42.0)
   - Swinject (2.7.1)
   - ViewStateKit (1.0.3)
 
@@ -20,8 +18,8 @@ SPEC REPOS:
     - ViewStateKit
 
 SPEC CHECKSUMS:
-  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
-  SwiftLint: dfd554ff0dff17288ee574814ccdd5cea85d76f7
+  Kingfisher: f5d8d60a0ef3edd642fd781bae60918599901aff
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   ViewStateKit: 75f6c9c3062ab1f1c655a2ac6790d746def12734
 
