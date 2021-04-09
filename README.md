@@ -43,7 +43,7 @@ private func setupFetchMovie() {
 
 ``` swift
 private func onSuccess(movie: [Movie]) {
-      collection.reloadData()
+      collectionView.reloadData()
       activityIndicator.stopAnimating()
 }
     
