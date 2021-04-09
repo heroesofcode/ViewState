@@ -16,14 +16,13 @@ A View State library to return the results for each state
 - In ViewModel calls the states that will return to ViewController
 
 ```swift
-func fetchMovie() -> ViewState<[Movie], AFError?> {
+func fetchMovie() -> ViewState<Movie, AFError> {
         self.viewState.fetchSource {
             self.service.getApiMovie(
-                onSuccess: { (resultArray) in
-                    self.movieArray = MovieMapper(resultArray: resultArray).transform()
-                    self.viewState.success(data: self.movieArray)
+                onSuccess: { resultArray in
+                    self.viewState.success(data: movieArray)
             },
-                onError: { (messageError) in
+                onError: { messageError in
                     self.viewState.error(error: messageError)
             })
         }
@@ -44,18 +43,12 @@ private func setupFetchMovie() {
 
 ``` swift
 private func onSuccess(movie: [Movie]) {
-      self.collection.reloadData()
-      alert.dismiss(animated: true, completion: nil)
+      collection.reloadData()
+      activityIndicator.stopAnimating()
 }
     
 private func onLoading() {
-      let loadingIndicator = UIActivityIndicatorView(frame: CGRect(x: 10, y: 5, width: 50, height: 50))
-      loadingIndicator.hidesWhenStopped = true
-      loadingIndicator.style = UIActivityIndicatorView.Style.medium
-      loadingIndicator.startAnimating();
-        
-      alert.view.addSubview(loadingIndicator)
-      present(alert, animated: true, completion: nil)
+     activityIndicator.startAnimating()
 }
     
 private func onError(message: AFError?) {
