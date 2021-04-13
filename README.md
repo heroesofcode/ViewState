@@ -66,7 +66,7 @@ import ViewState
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.0.3"))
+    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.1.0"))
 ]
 ```
 
