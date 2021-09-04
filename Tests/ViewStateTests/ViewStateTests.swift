@@ -21,7 +21,8 @@ final class ViewStateTests: XCTestCase {
     }
     
     func testVerifyObserverNameWithSuccess() {
-        XCTAssertEqual(viewModel.myName.value, "João")
+        let myName = Observable<String>(value: "João")
+        XCTAssertEqual(myName.value, "João")
     }
     
     func testVerifyFetchDatasWithSuccess() {

@@ -3,8 +3,6 @@ import Foundation
 
 final class ViewModel {
     
-    var myName = Observable<String>(value: "João")
-    
     private var viewState: ViewState<String, String>
     
     init(viewState: ViewState<String, String>) {
