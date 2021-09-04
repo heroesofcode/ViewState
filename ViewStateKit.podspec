@@ -5,12 +5,12 @@
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 Pod::Spec.new do |s|
   s.name             = 'ViewStateKit'
-  s.version          = '1.1.0'
+  s.version          = '1.1.1'
   s.summary          = 'A View State library for Swift, it returns the results for each state'
-  s.homepage         = 'https://github.com/joaolfp/ViewState'
+  s.homepage         = 'https://github.com/heroesofcode/ViewState'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'João Lucas' => 'joaolucasfp2001@gmail.com' }
-  s.social_media_url = 'https://twitter.com/lucasfp2001'
+  s.social_media_url = 'https://twitter.com/joaolfp'
   s.requires_arc     = true
   s.frameworks       = 'UIKit'
 
@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
 
-  s.source           = { :git => 'https://github.com/joaolfp/ViewState.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/heroesofcode/ViewState.git', :tag => s.version.to_s }
   s.source_files     = 'Sources/ViewState/**/*'
 end
