@@ -1,7 +1,6 @@
-
 import Foundation
 
-public class ViewState<T, E> : ObserverProtocol{
+public class ViewState<T, E> : ObserverProtocol {
     
     var id: Int = 123
     
@@ -88,7 +87,7 @@ public class ViewState<T, E> : ObserverProtocol{
     }
     
     public func onValueChanged(_ value: Any?) {
-        //empty
+//        empty
     }
     
     public func verifyMakeRequest() {
