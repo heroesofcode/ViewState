@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A62CF67A26E3E33A006CCDE0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CF67926E3E33A006CCDE0 /* ViewModel.swift */; };
+		A62CF68026E3E5E3006CCDE0 /* ViewStateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CF67F26E3E5E3006CCDE0 /* ViewStateSpy.swift */; };
 		OBJ_29 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Observable.swift */; };
 		OBJ_30 /* ObserverProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ObserverProtocol.swift */; };
 		OBJ_31 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ViewState.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A62CF67926E3E33A006CCDE0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A62CF67F26E3E5E3006CCDE0 /* ViewStateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateSpy.swift; sourceTree = "<group>"; };
 		OBJ_10 /* ObserverProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverProtocol.swift; sourceTree = "<group>"; };
 		OBJ_11 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		OBJ_14 /* ViewStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateTests.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			children = (
 				OBJ_14 /* ViewStateTests.swift */,
 				OBJ_15 /* XCTestManifests.swift */,
+				A62CF67926E3E33A006CCDE0 /* ViewModel.swift */,
+				A62CF67F26E3E5E3006CCDE0 /* ViewStateSpy.swift */,
 			);
 			name = ViewStateTests;
 			path = Tests/ViewStateTests;
@@ -267,6 +273,8 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_49 /* ViewStateTests.swift in Sources */,
+				A62CF68026E3E5E3006CCDE0 /* ViewStateSpy.swift in Sources */,
+				A62CF67A26E3E33A006CCDE0 /* ViewModel.swift in Sources */,
 				OBJ_50 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
