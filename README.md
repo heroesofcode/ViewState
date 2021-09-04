@@ -88,6 +88,12 @@ end
 $ pod install
 ```
 
+### Carthage
+
+```bash
+github "heroesofcode/ViewState"
+```
+
 ## Author
 Coded by João Lucas
 
