@@ -2,6 +2,7 @@
     <img src="https://github.com/joaolfp/ViewState/blob/master/logo/logo.png">
 </p>
 
+[![CI](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml)
 [![Swift Version](https://img.shields.io/badge/Swift-5.0.x-orange.svg)]()
 [![Cocoapods compatible](https://img.shields.io/cocoapods/v/ViewStateKit.svg)](https://cocoapods.org/pods/ViewStateKit)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager)
