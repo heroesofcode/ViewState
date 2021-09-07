@@ -60,19 +60,23 @@ private func onError(message: AFError?) {
 
 ## Installation
 
-### Swift Package Manager
-
+<details>
+  <summary><strong>Swift Package Manager</strong></summary>
+    
 ```swift
 import ViewState
 ```
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.1.0"))
+    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.1.1"))
 ]
 ```
 
-### Cocoapods
+</details>
+
+<details>
+  <summary><strong>CocoaPods</strong></summary>
 
 ```swift
 import ViewStateKit
@@ -87,15 +91,19 @@ end
 ```bash
 $ pod install
 ```
-
-### Carthage
-
+    
+</details>
+    
+<details>
+  <summary><strong>Carthage</strong></summary>
+    
 ```bash
 github "heroesofcode/ViewState"
 ```
-
+</details>
+    
 ## Author
-Coded by João Lucas
+Coded by [João Lucas](https://github.com/joaolfp)
 
 ## License
 
