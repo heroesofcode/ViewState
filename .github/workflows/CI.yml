@@ -18,9 +18,6 @@ jobs:
       with:
         xcode-version: 12.4
       
-    - name: Xcode version
-      run: /usr/bin/xcodebuild -version
-      
     - name: Bundle install
       run: bundle install
       
