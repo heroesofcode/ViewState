@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/joaolfp/ViewState/blob/master/logo/logo.png">
+    <img src="https://github.com/heroesofcode/ViewState/blob/master/.github/assets/logo.png">
 </p>
 
 [![CI](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml)
