@@ -5,7 +5,7 @@
 [![CI](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml)
 [![Swift Version](https://img.shields.io/badge/Swift-5.0.x-orange.svg)]()
 [![Tag](https://img.shields.io/github/v/tag/heroesofcode/ViewState?logo=github)](https://github.com/heroesofcode/ViewState/releases)
-[![Cocoapods compatible](https://img.shields.io/cocoapods/v/ViewStateKit.svg)](https://cocoapods.org/pods/ViewStateKit)
+[![Cocoapods compatible](https://img.shields.io/cocoapods/v/ViewStateKit)](https://cocoapods.org/pods/ViewStateKit)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager/)
 [![License](https://img.shields.io/github/license/joaolfp/ViewState.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
@@ -15,7 +15,7 @@
 A View State library to return the results for each state
 
 ## Support
-<img src="https://img.shields.io/cocoapods/p/ViewStateKit.svg?style=flat">
+<img src="https://img.shields.io/cocoapods/p/ViewStateKit?style=flat">
 
 ## How to use?
 
