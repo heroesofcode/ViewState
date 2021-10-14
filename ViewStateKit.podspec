@@ -12,11 +12,10 @@ Pod::Spec.new do |s|
   s.author           = { 'João Lucas' => 'joaolucasfp2001@gmail.com' }
   s.social_media_url = 'https://twitter.com/joaolfp'
   s.requires_arc     = true
-  s.frameworks       = 'UIKit'
 
   s.swift_versions   = ['5.0', '5.1']
   s.ios.deployment_target = '9.0'
-  s.tvos.deployment_target = '9.0'
+  s.osx.deployment_target = "10.11"
 
   s.source           = { :git => 'https://github.com/heroesofcode/ViewState.git', :tag => s.version.to_s }
   s.source_files     = 'Sources/ViewState/**/*'
