@@ -14,6 +14,9 @@
 
 A View State library to return the results for each state
 
+## Support
+<img src="https://img.shields.io/cocoapods/p/ViewStateKit.svg?style=flat">
+
 ## How to use?
 
 - In ViewModel calls the states that will return to ViewController
