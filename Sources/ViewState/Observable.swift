@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Joao Lucas on 27/06/20.
-//
-
 import Foundation
 
 class Observable<T> {
