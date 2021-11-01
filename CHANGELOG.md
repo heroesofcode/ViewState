@@ -3,6 +3,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 1.3.1
+**2021-11-01**
+
+- Add support to tvOS
+
 ## Version 1.2.1
 **2021-10-14**
 
