@@ -6,7 +6,7 @@ protocol ObserverProtocol {
     func onValueChanged(_ value: Any?)
 }
 
-protocol ObservableProtocol : class {
+protocol ObservableProtocol : AnyObject {
     var observers : [ObserverProtocol] { get set }
 
     func addObserver(_ observer: ObserverProtocol)
