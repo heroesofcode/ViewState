@@ -4,13 +4,13 @@ class Observable<T> {
 
     typealias CompletionHandler = ((T) -> Void)
 
-    var value : T? {
+    var value: T? {
         didSet {
             self.notifyObservers(self.observers)
         }
     }
 
-    var observers : [Int : CompletionHandler] = [:]
+    var observers: [Int: CompletionHandler] = [:]
 
     init(value: T?) {
         self.value = value
@@ -24,7 +24,7 @@ class Observable<T> {
         self.observers.removeValue(forKey: observer.id)
     }
 
-    func notifyObservers(_ observers: [Int : CompletionHandler]) {
+    func notifyObservers(_ observers: [Int: CompletionHandler]) {
         if value != nil {
             observers.forEach({ $0.value(value!) })
         }
