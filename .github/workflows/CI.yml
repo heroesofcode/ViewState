@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - uses: maxim-lobanov/setup-xcode@v1.5.0
+    - uses: maxim-lobanov/setup-xcode@v1.5.1
       with:
         xcode-version: 14.0.1
       
