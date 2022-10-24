@@ -15,7 +15,7 @@
 A View State library to return the results for each state
 
 ## Support
-<img src="https://img.shields.io/cocoapods/p/ViewStateKit?style=flat">
+iOS / tvOS / macOS
 
 ## How to use?
 
