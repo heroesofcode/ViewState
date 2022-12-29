@@ -17,7 +17,7 @@ A View State library to return the results for each state
 ## Support
 iOS / tvOS / macOS
 
-## How to use?
+## Usage
 
 - In ViewModel calls the states that will return to ViewController
 
