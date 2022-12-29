@@ -16,6 +16,11 @@ jobs:
     - name: Bundle install
       run: bundle install
       
+    - name: Lint
+      run: |
+            set -o pipefail
+            swiftlint
+      
     - name: Build and Tests
       run: make test
            
