@@ -22,43 +22,88 @@ iOS / tvOS / macOS
 - In ViewModel calls the states that will return to ViewController
 
 ```swift
-func fetchMovie() -> ViewState<Movie, AFError> {
-        self.viewState.fetchSource {
-            self.service.getApiMovie(
-                onSuccess: { resultArray in
-                    self.viewState.success(data: movieArray)
-            },
-                onError: { messageError in
-                    self.viewState.error(error: messageError)
-            })
-        }
+import ViewState
 
-      return viewState
+protocol ViewModelProtocol {
+    func fetchRestaurants() -> ViewState<[RestaurantsDTO], APIError>
+}
+
+final class ViewModel: ViewModelProtocol {
+    
+    private var viewState = ViewState<[RestaurantsDTO], APIError>()
+    private let service: ServiceProtocol
+    
+    init(service: ServiceProtocol = Service()) {
+        self.service = service
+    }
+    
+    func fetchRestaurants() -> ViewState<[RestaurantsDTO], APIError> {
+        viewState.fetchSource {
+            self.service.getRestaurantsList { result in
+                switch result {
+                case .success(let restaurants):
+                    self.viewState.success(data: restaurants)
+                case .failure(let error):
+                    self.viewState.error(error: error)
+               }
+           }
+        }
+        return viewState
+    }
 }
 ```
 - In the ViewController it calls the ViewModel method and places the states of each one.
 
 ``` swift
-private func setupFetchMovie() {
-     viewModel.fetchMovie()
-          .successObserver(onSuccess)
-          .loadingObserver(onLoading)
-          .errorObserver(onError)
-}
-```
+import UIKit
+import ViewState
 
-``` swift
-private func onSuccess(movie: Movie) {
-      collectionView.reloadData()
-      activityIndicator.stopAnimating()
-}
+final class ViewController: UIViewController {
     
-private func onLoading() {
-     activityIndicator.startAnimating()
-}
+    private let mainView = MainView()
+    private let viewModel: ViewModelProtocol
     
-private func onError(message: AFError?) {
-      ErrorView.instance.showError()
+    var coordinator: CoordinatorProtocol?
+    
+    init(viewModel: ViewModelProtocol = ViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func loadView() {
+        self.view = mainView
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        fetchRestaurantsList()
+    }
+    
+    private func fetchRestaurantsList() {
+        viewModel.fetchRestaurants()
+            .loadingObserver(onLoading)
+            .successObserver(onSuccess)
+            .errorObserver(onFailure)
+    }
+    
+    private func onLoading() {
+        // Action loading
+    }
+    
+    private func onSuccess(restaurants: [RestaurantsDTO]) {
+        mainView.setup(data: restaurants)
+    }
+    
+    private func onFailure(error: APIError) {
+        let errorView = ErrorView(message: "Network failure")
+        view = errorView
+    }
 }
 ```
 
