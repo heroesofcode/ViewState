@@ -12,6 +12,9 @@ jobs:
     - uses: maxim-lobanov/setup-xcode@v1.5.1
       with:
         xcode-version: 14.2
+        
+    - name: Bundle install
+      run: bundle install
       
     - name: Lint
       run: |
