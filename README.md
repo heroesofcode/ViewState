@@ -109,27 +109,7 @@ final class ViewController: UIViewController {
 
 ## Installation
 
-<details>
-  <summary><strong>Swift Package Manager</strong></summary>
-    
-```swift
-import ViewState
-```
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.2"))
-]
-```
-
-</details>
-
-<details>
-  <summary><strong>CocoaPods</strong></summary>
-
-```swift
-import ViewStateKit
-```
+### [CocoaPods](https://cocoapods.org)
 
 ```ruby
 target '<Your Target Name>' do
@@ -137,19 +117,24 @@ target '<Your Target Name>' do
 end
 ```
 
+After run
 ```bash
 $ pod install
 ```
-    
-</details>
-    
-<details>
-  <summary><strong>Carthage</strong></summary>
-    
-```bash
+
+### [Swift Package Manager (SPM)](https://swift.org/package-manager)
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.2"))
+]
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+```
 github "heroesofcode/ViewState"
 ```
-</details>
     
 ## Author
 Coded by [João Lucas](https://github.com/joaolfp)
