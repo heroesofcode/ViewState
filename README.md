@@ -24,18 +24,10 @@ iOS / tvOS / macOS
 ```swift
 import ViewState
 
-protocol ViewModelProtocol {
-    func fetchRestaurants() -> ViewState<[RestaurantsDTO], APIError>
-}
-
-final class ViewModel: ViewModelProtocol {
+final class ViewModel {
     
     private var viewState = ViewState<[RestaurantsDTO], APIError>()
-    private let service: ServiceProtocol
-    
-    init(service: ServiceProtocol = Service()) {
-        self.service = service
-    }
+    private let service = Service()
     
     func fetchRestaurants() -> ViewState<[RestaurantsDTO], APIError> {
         viewState.fetchSource {
@@ -48,6 +40,7 @@ final class ViewModel: ViewModelProtocol {
                }
            }
         }
+
         return viewState
     }
 }
@@ -59,25 +52,8 @@ import UIKit
 import ViewState
 
 final class ViewController: UIViewController {
-    
-    private let mainView = MainView()
-    private let viewModel: ViewModelProtocol
-    
-    var coordinator: CoordinatorProtocol?
-    
-    init(viewModel: ViewModelProtocol = ViewModel()) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func loadView() {
-        self.view = mainView
-    }
+
+    private let viewModel = ViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,16 +69,15 @@ final class ViewController: UIViewController {
     }
     
     private func onLoading() {
-        // Action loading
+        // Event loading
     }
     
     private func onSuccess(restaurants: [RestaurantsDTO]) {
-        mainView.setup(data: restaurants)
+        // Event success
     }
     
     private func onFailure(error: APIError) {
-        let errorView = ErrorView(message: "Network failure")
-        view = errorView
+        // Event error
     }
 }
 ```
