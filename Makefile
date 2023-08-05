@@ -1,5 +1,5 @@
 test:
-	set -o pipefail && xcodebuild test -scheme "ViewState" -destination "platform=iOS Simulator,name=IPhone 14" clean test | xcpretty
+	set -o pipefail && xcodebuild -workspace ViewState.xcworkspace -scheme "Tests" -destination "platform=iOS Simulator,name=iPhone 14" clean test | xcpretty
 
 build:
 	set -o pipefail && xcodebuild build -scheme "ViewState" -destination "platform=iOS Simulator,name=IPhone 14" | xcpretty
