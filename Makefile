@@ -1,6 +1,6 @@
 test:
 	xcodebuild -workspace ViewState.xcworkspace \
-               -scheme ViewState \
+               -scheme Tests \
                -destination platform=iOS\ Simulator,OS=16.0,name=iPhone\ 14 \
                -enableCodeCoverage YES \
                clean test | xcpretty
