@@ -16,12 +16,12 @@ jobs:
     - name: Install Tuist
       run: |
         bash <(curl -Ls https://install.tuist.io)
-        shell: bash
+      shell: bash
         
     - name: Generate project with tuist
       run: |
         tuist generate --no-open
-        shell: bash
+      shell: bash
         
     - name: Bundle install
       run: bundle install
