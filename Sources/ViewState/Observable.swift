@@ -1,6 +1,6 @@
 import Foundation
 
-class Observable<T>  {
+class Observable<T> {
 
     typealias CompletionHandler = ((T) -> Void)
 
