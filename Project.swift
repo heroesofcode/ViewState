@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "ViewState",
@@ -10,7 +11,8 @@ let project = Project(
             bundleId: "com.heroesofcode.viewstate",
             sources: [
                 "Sources/ViewState/**/*"
-            ]
+            ],
+            scripts: Project.targetScripts()
         ),
         Target(
             name: "Tests",
