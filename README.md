@@ -110,6 +110,15 @@ dependencies: [
 ```
 github "heroesofcode/ViewState"
 ```
+
+## Contributing
+
+To contribute, just fork this project and then open a pull request. Feel free to contribute, bring ideas and raise any issue tab.
+
+The `Xcode` project is generated using [Tuist](https://tuist.io/). To generate and open the project in Xcode, you just need to run:
+```
+tuist generate --open
+```
     
 ## Author
 Coded by [João Lucas](https://github.com/joaolfp)
