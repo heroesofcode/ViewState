@@ -18,7 +18,7 @@ public extension Project {
         return [
             TargetScript.pre(
                 script: swiftLint,
-                name: "[SwiftLint] Run Script",
+                name: "SwiftLint",
                 basedOnDependencyAnalysis: false
             )
         ]
