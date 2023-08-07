@@ -113,7 +113,7 @@ github "heroesofcode/ViewState"
 
 ## Contributing
 
-To contribute, just fork this project and then open a pull request. Feel free to contribute, bring ideas and raise any issue tab.
+To contribute, just fork this project and then open a pull request, feel free to contribute, bring ideas and raise any problem in the issue tab..
 
 The `Xcode` project is generated using [Tuist](https://tuist.io/). To generate and open the project in Xcode, you just need to run:
 ```
