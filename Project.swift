@@ -9,6 +9,7 @@ let project = Project(
             platform: .iOS,
             product: .framework,
             bundleId: "com.heroesofcode.viewstate",
+            deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
             sources: ["Sources/ViewState/**/*"],
             scripts: Project.targetScripts()
         ),
@@ -17,6 +18,7 @@ let project = Project(
             platform: .iOS,
             product: .unitTests,
             bundleId: "com.heroesofcode.viewstateTests",
+            deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
             infoPlist: .default,
             sources: ["Tests/ViewStateTests/**/*"],
             dependencies: [
@@ -30,7 +32,7 @@ let project = Project(
             bundleId: "com.heroesofcode.ViewStateExample",
             deploymentTarget: .iOS(targetVersion: "15.0", devices: [.iphone]),
             infoPlist: "Example/Example/Info.plist",
-            sources: ["Example/Example/**"],
+            sources: ["Example/Example/**/*"],
             resources: [
                 "Example/Example/Resources/Assets.xcassets",
                 "Example/Example/Resources/Base.lproj/**"
