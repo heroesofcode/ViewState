@@ -36,6 +36,9 @@ let project = Project(
                 "Example/Example/Resources/Base.lproj/**"
             ],
             scripts: Project.targetScripts(),
+            dependencies: [
+                .target(name: "ViewState")
+            ],
             settings: Project.settings()
         ),
         Target(
