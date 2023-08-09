@@ -87,7 +87,7 @@ final class ViewController: UIViewController {
 
 ## Installation
 
-##### [CocoaPods](https://cocoapods.org)
+### [CocoaPods](https://cocoapods.org)
 
 ```ruby
 target '<Your Target Name>' do
