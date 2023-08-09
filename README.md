@@ -26,15 +26,15 @@ import ViewState
 
 final class ViewModel {
     
-    private var viewState = ViewState<[RestaurantsDTO], APIError>()
+    private var viewState = ViewState<Model, APIError>()
     private let service = Service()
     
-    func fetchRestaurants() -> ViewState<[RestaurantsDTO], APIError> {
+    func fetchData() -> ViewState<Model, APIError> {
         viewState.fetchSource {
-            self.service.getRestaurantsList { result in
+            self.service.getGithubData { result in
                 switch result {
-                case .success(let restaurants):
-                    self.viewState.success(data: restaurants)
+                case .success(let response):
+                    self.viewState.success(data: response)
                 case .failure(let error):
                     self.viewState.error(error: error)
                }
@@ -58,11 +58,11 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchRestaurantsList()
+        fetchGithubData()
     }
     
-    private func fetchRestaurantsList() {
-        viewModel.fetchRestaurants()
+    private func fetchGithubData() {
+        viewModel.fetchData()
             .loadingObserver(onLoading)
             .successObserver(onSuccess)
             .errorObserver(onFailure)
@@ -72,7 +72,7 @@ final class ViewController: UIViewController {
         // Event loading
     }
     
-    private func onSuccess(restaurants: [RestaurantsDTO]) {
+    private func onSuccess(response: Model) {
         // Event success
     }
     
@@ -82,9 +82,12 @@ final class ViewController: UIViewController {
 }
 ```
 
+- See a demo below :smiley:
+<img src="https://github.com/heroesofcode/ViewState/blob/master/.github/assets/ImageExample.gif" width="310" height="640" />
+
 ## Installation
 
-### [CocoaPods](https://cocoapods.org)
+##### [CocoaPods](https://cocoapods.org)
 
 ```ruby
 target '<Your Target Name>' do
