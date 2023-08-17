@@ -120,7 +120,7 @@ To contribute, just fork this project and then open a pull request, feel free to
 
 The `Xcode` project is generated using [Tuist](https://tuist.io/). To generate and open the project in Xcode, you just need to run:
 ```
-tuist generate --open
+tuist generate
 ```
     
 ## Author
