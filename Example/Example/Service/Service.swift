@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Service {
+final class Service {
     
     func request(user: String, completion: @escaping (Result<DataModel, Error>) -> Void) {
         

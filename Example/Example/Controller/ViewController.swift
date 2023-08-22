@@ -8,7 +8,7 @@
 import UIKit
 import ViewState
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     private lazy var textField: UITextField = {
         let textField = UITextField()

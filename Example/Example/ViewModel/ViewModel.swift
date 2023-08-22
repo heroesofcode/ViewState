@@ -8,7 +8,7 @@
 import Foundation
 import ViewState
 
-class ViewModel {
+final class ViewModel {
     
     private let viewState = ViewState<DataModel, Error>()
     private let service = Service()
