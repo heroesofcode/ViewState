@@ -7,7 +7,6 @@
 
 import UIKit
 
-// swiftlint:disable final_class
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
