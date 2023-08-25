@@ -49,8 +49,8 @@ public class ViewState<T, E> : ObserverProtocol {
     
     @discardableResult
     public func errorObserver(_ error: @escaping (E) -> Void) -> ViewState {
-        self.errorBehavior.addObserver(self) { messageError in
-            error(messageError)
+        self.errorBehavior.addObserver(self) { errorMessage in
+            error(errorMessage)
         }
         
         self.errorObserved = true
