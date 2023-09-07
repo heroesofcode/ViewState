@@ -1,6 +1,6 @@
 import Foundation
 
-public class ViewState<T, E> : ObserverProtocol {
+public class ViewState<T, E>: ObserverProtocol {
     
     var id: Int = 123
     
