@@ -10,13 +10,11 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/heroesofcode/ViewState'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'João Lucas' => 'joaolucasfp2001@gmail.com' }
-  s.social_media_url = 'https://twitter.com/joaolfp'
   s.requires_arc     = true
 
   s.swift_versions   = ['5.0', '5.1']
   s.ios.deployment_target = '11.0'
   s.osx.deployment_target = '10.15'
-  s.tvos.deployment_target = '13.0'
 
   s.source           = { :git => 'https://github.com/heroesofcode/ViewState.git', :tag => s.version.to_s }
   s.source_files     = 'Sources/ViewState/**/*'
