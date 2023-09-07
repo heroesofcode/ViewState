@@ -22,7 +22,9 @@ jobs:
         swiftlint
 
     - name: Run pod install example
-      run: bundle exec pod install
+      run: cd Example/
+          |
+          bundle exec pod install
 
     - name: Build example
       run: set -o pipefail && xcodebuild build -workspace Example/Example.xcworkspace -scheme "Example" -destination "platform=iOS Simulator,name=IPhone 14" | xcpretty
