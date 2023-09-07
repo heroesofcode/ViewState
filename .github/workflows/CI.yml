@@ -20,6 +20,11 @@ jobs:
       run: |
         set -o pipefail
         swiftlint
+
+    - name: Build example
+      run: bundle exec pod install
+           |
+           set -o pipefail && xcodebuild build -workspace Example/Norris.xcworkspace -scheme "Example" -destination "platform=iOS Simulator,name=IPhone 14" | xcpretty
             
     - name: Build
       run: make build
