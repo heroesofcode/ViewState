@@ -102,7 +102,7 @@ $ pod install
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.2"))
+    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.3"))
 ]
 ```
 

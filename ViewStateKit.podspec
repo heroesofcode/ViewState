@@ -5,7 +5,7 @@
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
 Pod::Spec.new do |s|
   s.name             = 'ViewStateKit'
-  s.version          = '1.3.2'
+  s.version          = '1.3.3'
   s.summary          = 'A View State library for Swift, it returns the results for each state'
   s.homepage         = 'https://github.com/heroesofcode/ViewState'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.requires_arc     = true
 
   s.swift_versions   = ['5.0', '5.1']
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = "10.11"
-  s.tvos.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
+  s.osx.deployment_target = '10.15'
+  s.tvos.deployment_target = '13.0'
 
   s.source           = { :git => 'https://github.com/heroesofcode/ViewState.git', :tag => s.version.to_s }
   s.source_files     = 'Sources/ViewState/**/*'

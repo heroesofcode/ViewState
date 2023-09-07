@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 1.3.3
+**2023-09-07**
+
+- Fix colon SwiftLint Error
+
 ## Version 1.3.1
 **2021-11-01**
 
