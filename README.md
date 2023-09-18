@@ -109,7 +109,7 @@ dependencies: [
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```
-github "heroesofcode/ViewState"
+github "heroesofcode/ViewState" "master"
 ```
 
 ## Contributing
