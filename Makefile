@@ -6,4 +6,8 @@ test:
            clean test | xcpretty
 
 build:
-	set -o pipefail && xcodebuild build -scheme "ViewState" -destination "platform=iOS Simulator,name=IPhone 14" | xcpretty
+	set -o pipefail
+	xcodebuild -project MagicImages.xcodeproj \
+           -scheme MagicImages-Package \
+           -destination platform=iOS\ Simulator,name=iPhone\ 14 \
+           build | xcpretty
