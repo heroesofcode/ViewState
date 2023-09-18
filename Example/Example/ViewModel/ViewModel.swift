@@ -15,13 +15,12 @@ final class ViewModel {
     
     func fetchData(user: String) -> ViewState<DataModel, Error> {
         viewState.fetchSource {
-            
-            self.service.request(user: user) { result in
+            self.service.request(user: user) { [weak self] result in
                 switch result {
                 case .success(let model):
-                    self.viewState.success(data: model)
+                    self?.viewState.success(data: model)
                 case .failure(let error):
-                    self.viewState.error(error: error)
+                    self?.viewState.error(error: error)
                 }
             }
         }
