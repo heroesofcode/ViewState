@@ -14,9 +14,6 @@
 
 A View State library to return the results for each state
 
-## Support
-iOS / tvOS / macOS
-
 ## Usage
 
 - In ViewModel calls the states that will return to ViewController
@@ -87,31 +84,12 @@ final class ViewController: UIViewController {
 
 ## Installation
 
-### [CocoaPods](https://cocoapods.org)
-
-```ruby
-target '<Your Target Name>' do
-  pod 'ViewStateKit'
-end
-```
-
-After run
-```bash
-$ pod install
-```
-
 ### [Swift Package Manager (SPM)](https://swift.org/package-manager)
 
 ```swift
 dependencies: [
     .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.3"))
 ]
-```
-
-### [Carthage](https://github.com/Carthage/Carthage)
-
-```
-github "heroesofcode/ViewState" "master"
 ```
 
 ## Contributing

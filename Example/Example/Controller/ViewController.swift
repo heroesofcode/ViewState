@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import ViewStateKit
+import ViewState
 
 final class ViewController: UIViewController {
     

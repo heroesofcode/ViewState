@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import ViewStateKit
+import ViewState
 
 final class ViewModel {
     

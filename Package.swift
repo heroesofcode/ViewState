@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "ViewState",
-    platforms: [.iOS(.v11), .macOS(.v10_15), .tvOS(.v13)],
+    platforms: [.iOS(.v12), .macOS(.v10_15), .tvOS(.v13)],
     products: [
         .library(
             name: "ViewState",
