@@ -1,13 +1,17 @@
-test:
-	set -o pipefail
-	xcodebuild -project ViewState.xcodeproj \
-           -scheme ViewState-Package \
-           -destination platform=iOS\ Simulator,name=iPhone\ 14 \
-           clean test | xcpretty
+test-ios:
+	set -o pipefail && \
+	xcodebuild test \
+		-scheme ViewState \
+		-destination "platform=iOS Simulator,name=IPhone 14" clean test | xcpretty
 
-build:
-	set -o pipefail
-	xcodebuild -project ViewState.xcodeproj \
-           -scheme ViewState-Package \
-           -destination platform=iOS\ Simulator,name=iPhone\ 14 \
-           build | xcpretty
+test-macos:
+	set -o pipefail && \
+	xcodebuild test \
+		-scheme ViewState \
+		-destination platform="macOS" clean test | xcpretty
+
+test-tvos:
+	set -o pipefail && \
+	xcodebuild test \
+		-scheme ViewState \
+		-destination platform="tvOS Simulator,name=Apple TV 4K" clean test | xcpretty
