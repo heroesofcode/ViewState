@@ -85,9 +85,18 @@ final class ViewController: UIViewController {
 ### [Swift Package Manager (SPM)](https://swift.org/package-manager)
 
 ```swift
-dependencies: [
-    .package(url: "https://github.com/joaolfp/ViewState.git", .upToNextMajor(from: "1.3.3"))
-]
+import PackageDescription
+let package = Package(
+    name: "<Your Product Name>",
+    dependencies: [
+       .package(url: "https://github.com/heroesofcode/ViewState", .upToNextMajor(from: "1.4.0"))
+    ],
+    targets: [
+        .target(
+            name: "<Your Target Name>",
+            dependencies: ["ViewState"]),
+    ]
+)
 ```
 
 ## Contributing

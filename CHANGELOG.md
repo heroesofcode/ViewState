@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.4.0
+**2023-09-23**
+
+- Support for CocoaPods and Carthage has been obsoleted. No new releases will be available on those platforms, starting with 1.4.0. Please use the Swift Package Manager to depend on ViewState.
+- ViewState now requires iOS 12+, macOS 10.15+ and tvOS 12+.
+
 ## Version 1.3.3
 **2023-09-07**
 
