@@ -74,12 +74,12 @@ public class ViewState<T, E>: ObserverProtocol {
         }
     }
     
-    public func success(data: T) {
-        self.successBehavior.value = data
+    private func loading() {
+        self.loadingBehavior.value = {}
     }
     
-    public func loading() {
-        self.loadingBehavior.value = {}
+    public func success(data: T) {
+        self.successBehavior.value = data
     }
     
     public func error(error: E) {
