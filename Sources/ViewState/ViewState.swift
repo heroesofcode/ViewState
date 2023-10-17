@@ -86,9 +86,9 @@ public class ViewState<T, E>: ObserverProtocol {
         self.errorBehavior.value = error
     }
     
-    public func onValueChanged(_ value: Any?) {}
+    func onValueChanged(_ value: Any?) {}
     
-    public func verifyMakeRequest() {
+    private func verifyMakeRequest() {
         if successObserved &&
             loadingObserved &&
             errorObserved {
