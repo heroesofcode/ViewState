@@ -26,7 +26,7 @@ final class ViewModel {
     
     func fetchData() -> ViewState<Model, APIError> {
         viewState.fetchSource {
-            self.service.getGithubData { [weak self] result in
+            self.service.getData { [weak self] result in
                 switch result {
                 case .success(let response):
                     self?.viewState.success(data: response)
