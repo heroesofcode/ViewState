@@ -53,10 +53,10 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        fetchGithubData()
+        loadData()
     }
     
-    private func fetchGithubData() {
+    private func loadData() {
         viewModel.fetchData()
             .loadingObserver(onLoading)
             .successObserver(onSuccess)
