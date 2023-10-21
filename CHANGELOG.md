@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 1.5.0
+**2023-10-21**
+
+- Add watchOS support
+- Added validation for unpacking variables that could cause a crash
+
 ## Version 1.4.0
 **2023-09-23**
 
