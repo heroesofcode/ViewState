@@ -103,6 +103,12 @@ let package = Package(
 
 To contribute, just fork this project and then open a pull request, feel free to contribute, bring ideas and raise any problem in the issue tab.
 
+## Contributors
+
+<a href="https://github.com/heroesofcode/ViewState/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=heroesofcode/ViewState" />
+</a>
+
 ## License
 
-ViewState is released under the MIT license. See LICENSE for details.
+ViewState is released under the MIT license. See [LICENSE](https://github.com/heroesofcode/ViewState/blob/master/LICENSE) for details.
