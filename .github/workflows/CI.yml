@@ -34,7 +34,7 @@ jobs:
       run: make test-watchos
       
     - name: Danger action
-      uses: MeilCli/danger-action@v5.6.26
+      uses: MeilCli/danger-action@v5.6.27
       if: github.event_name == 'pull_request'
       with:
         plugins_file: 'Gemfile'
