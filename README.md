@@ -82,7 +82,6 @@ final class ViewController: UIViewController {
 ``` swift
 private func loadData() {
      viewModel.fetchData()
-         .loadingObserver(onLoading)
          .successObserver(onSuccess)
          .errorObserver(onFailure)
 }
