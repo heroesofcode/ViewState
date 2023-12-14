@@ -80,9 +80,12 @@ final class ViewController: UIViewController {
 - loadingObserver is optional, you can just use success and error
 
 ``` swift
-        viewModel.fetchData()
-            .successObserver(onSuccess)
-            .errorObserver(onFailure)
+private func loadData() {
+     viewModel.fetchData()
+         .loadingObserver(onLoading)
+         .successObserver(onSuccess)
+         .errorObserver(onFailure)
+}
 ```
 
 - See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.
