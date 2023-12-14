@@ -94,6 +94,9 @@ public class ViewState<T, E>: ObserverProtocol {
             errorObserved {
             
             postRequest()
+        } else if successObserved
+            && errorObserved {
+            postRequest()
         }
     }
 }
