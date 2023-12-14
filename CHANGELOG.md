@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## Version 1.6.0
+**2023-12-14**
+
+- loadingObserver is optional
+
 ## Version 1.5.0
 **2023-10-21**
 
