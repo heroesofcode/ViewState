@@ -2,11 +2,11 @@ import Foundation
 
 class Observable<T> {
 
-    typealias CompletionHandler = ((T) -> Void)
+    typealias CompletionHandler = (T) -> Void
 
     var value: T? {
         didSet {
-            self.notifyObservers(self.observers)
+            notifyObservers(observers)
         }
     }
 
@@ -17,17 +17,17 @@ class Observable<T> {
     }
 
     func addObserver(_ observer: ObserverProtocol, completion: @escaping CompletionHandler) {
-        self.observers[observer.id] = completion
+        observers[observer.id] = completion
     }
 
     func removeObserver(_ observer: ObserverProtocol) {
-        self.observers.removeValue(forKey: observer.id)
+        observers.removeValue(forKey: observer.id)
     }
 
     func notifyObservers(_ observers: [Int: CompletionHandler]) {
         if value != nil {
             guard let value = value else { return }
-            observers.forEach({ $0.value(value) })
+            observers.forEach { $0.value(value) }
         }
     }
 

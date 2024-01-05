@@ -9,22 +9,22 @@ import Foundation
 import ViewState
 
 final class ViewModel {
-    
+
     private let viewState = ViewState<DataModel, Error>()
     private let service = Service()
-    
+
     func fetchData(user: String) -> ViewState<DataModel, Error> {
         viewState.fetchSource {
             self.service.request(user: user) { [weak self] result in
                 switch result {
-                case .success(let model):
+                case let .success(model):
                     self?.viewState.success(data: model)
-                case .failure(let error):
+                case let .failure(error):
                     self?.viewState.error(error: error)
                 }
             }
         }
-        
+
         return viewState
     }
 }
