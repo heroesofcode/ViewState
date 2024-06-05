@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://github.com/heroesofcode/ViewState/blob/master/.github/assets/logo.png">
+    <img src="https://github.com/heroesofcode/ViewState/blob/master/assets/logo.png?raw=true">
 </p>
 
 [![CI](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml)
@@ -88,7 +88,7 @@ private func loadData() {
 ```
 
 - See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.
-<img src="https://github.com/heroesofcode/ViewState/blob/master/.github/assets/ImageExample.gif" width="310" height="640" />
+<img src="https://github.com/heroesofcode/ViewState/blob/master/assets/ImageExample.gif?raw=true" width="310" height="640" />
 
 ## Installation
 
