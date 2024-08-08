@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.0.0
+**2024-08-07**
+
+- Adding improvements - @joaoflp
+- Bump activesupport from 5.2.8.1 to 6.1.7.5 - #74 - @dependabot
+
 ## Version 1.6.0
 **2023-12-14**
 
