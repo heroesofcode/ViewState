@@ -62,8 +62,10 @@ public class ViewState<T, E>: ObserverProtocol {
     
     private func observerRequest() {
         verifyCanMakeRequest.addObserver(self) { [weak self] _ in
-            self?.loading()
-            self?.fetchSourceBehavior()
+            guard let self = self else { return }
+            
+            self.loading()
+            self.fetchSourceBehavior()
         }
     }
     
