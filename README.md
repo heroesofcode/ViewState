@@ -40,7 +40,7 @@ final class ViewModel {
     }
 }
 ```
-- In the ViewController it calls the ViewModel method and places the states of each one.
+In the ViewController it calls the ViewModel method and places the states of each one.
 
 ``` swift
 import UIKit
@@ -77,7 +77,7 @@ final class ViewController: UIViewController {
 }
 ```
 
-- loadingObserver is optional, you can just use success and error
+loadingObserver is optional, you can just use success and error
 
 ``` swift
 private func loadData() {
@@ -87,7 +87,7 @@ private func loadData() {
 }
 ```
 
-- See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.
+See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.
 <img src="https://github.com/heroesofcode/ViewState/blob/master/assets/ImageExample.gif?raw=true" width="310" height="640" />
 
 ## Installation
