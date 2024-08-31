@@ -14,7 +14,7 @@ A View State library to return the results for each state
 
 ## Usage
 
-- In ViewModel calls the states that will return to ViewController
+In ViewModel calls the states that will return to ViewController
 
 ```swift
 import ViewState
@@ -87,7 +87,7 @@ private func loadData() {
 }
 ```
 
-See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.
+See a demo below. You can see this demo in our [example](https://github.com/heroesofcode/ViewState/tree/master/Example) :smiley:.<br>
 <img src="https://github.com/heroesofcode/ViewState/blob/master/assets/ImageExample.gif?raw=true" width="310" height="640" />
 
 ## Installation
