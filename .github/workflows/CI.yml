@@ -41,7 +41,7 @@ jobs:
       run: xrun project ViewState.xcodeproj ViewState 17.5 15 fail
 
     - name: Run macOS tests
-      run: xrun project DeliveryApp.xcodeproj DeliveryApp macOS fail
+      run: xrun project ViewState.xcodeproj ViewState macOS fail
       
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.12
