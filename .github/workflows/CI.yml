@@ -31,6 +31,11 @@ jobs:
          tuist install
          tuist generate --no-open
       shell: bash
+
+    - name: Install xrun
+      run: |
+         brew tap heroesofcode/taps
+         brew install heroesofcode/taps/xrun
         
     - name: Run iOS tests
       run: xrun project ViewState.xcodeproj ViewState 17.5 15 fail
