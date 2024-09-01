@@ -20,18 +20,28 @@ jobs:
         
     - name: Bundle install
       run: bundle install
+      
+    - name: Mise install
+      uses: jdx/mise-action@v2
+      with:
+        experimental: true
+        
+    - name: Generate project with tuist
+      run: |
+         tuist install
+         tuist generate --no-open
+      shell: bash
+
+    - name: Install xrun
+      run: |
+         brew tap heroesofcode/taps
+         brew install heroesofcode/taps/xrun
         
     - name: Run iOS tests
-      run: make test-ios
+      run: xrun project ViewState.xcodeproj ViewState 17.5 15 fail
 
     - name: Run macOS tests
-      run: make test-macos
-
-    - name: Run tvOS tests
-      run: make test-tvos
-      
-    - name: Run watchOS tests
-      run: make test-watchos
+      run: xrun project ViewState.xcodeproj ViewState macOS fail
       
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.12
@@ -43,6 +53,3 @@ jobs:
         danger_id: 'danger-pr'
       env:
         DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4.5.0
