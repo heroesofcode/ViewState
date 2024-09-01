@@ -1,6 +1,6 @@
 # Contributing
 
-Feel free to contribute, here at ViewState we are generating the project with [Tuist](https://github.com/tuist/tuist).
+Feel free to contribute, here at ViewState we are generating the project with [Tuist](https://docs.tuist.io/).
 
 1 - Download mise
 
