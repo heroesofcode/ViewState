@@ -28,8 +28,9 @@ jobs:
         
     - name: Generate project with tuist
       run: |
+         tuist install
          tuist generate --no-open
-         shell: bash
+      shell: bash
         
     - name: Run iOS tests
       run: make test-ios
