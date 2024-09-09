@@ -38,10 +38,7 @@ jobs:
          brew install heroesofcode/taps/xrun
         
     - name: Run iOS tests
-      run: xrun project ViewState.xcodeproj ViewState 17.5 15 fail
-
-    - name: Run macOS tests
-      run: xrun project ViewState.xcodeproj ViewState macOS fail
+      run: xrun workspace ViewState.xcworkspace ViewState 17.5 15 fail
       
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.12
