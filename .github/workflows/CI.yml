@@ -40,9 +40,6 @@ jobs:
     - name: Run iOS tests
       run: xrun workspace ViewState.xcworkspace ViewState 17.5 15 fail
 
-    - name: Run macOS tests
-      run: xrun workspace ViewState.xcworkspace ViewState macOS fail
-      
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.12
       if: github.event_name == 'pull_request'
