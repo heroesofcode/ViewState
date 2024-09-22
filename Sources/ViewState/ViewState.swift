@@ -16,15 +16,19 @@ public class ViewState<T, E>: ObserverProtocol {
 
     private var fetchSourceBehavior: () -> Void = {}
 
+    private let stateQueue = DispatchQueue(label: "viewState.queue", attributes: .concurrent)
+
     public init() {
         observerRequest()
     }
 
     @discardableResult
     public func successObserver(_ success: @escaping (T) -> Void) -> ViewState {
-        successBehavior.addObserver(self) { data in
+        successBehavior.addObserver(self) { [weak self] data in
             guard let data else { return }
-            success(data)
+            DispatchQueue.main.async {
+                success(data)
+            }
         }
         successObserved = true
         verifyMakeRequest()
@@ -33,8 +37,10 @@ public class ViewState<T, E>: ObserverProtocol {
 
     @discardableResult
     public func loadingObserver(_ loading: @escaping () -> Void) -> ViewState {
-        loadingBehavior.addObserver(self) { _ in
-            loading()
+        loadingBehavior.addObserver(self) { [weak self] _ in
+            DispatchQueue.main.async {
+                loading()
+            }
         }
         loadingObserved = true
         verifyMakeRequest()
@@ -43,9 +49,11 @@ public class ViewState<T, E>: ObserverProtocol {
 
     @discardableResult
     public func errorObserver(_ error: @escaping (E) -> Void) -> ViewState {
-        errorBehavior.addObserver(self) { errorMessage in
+        errorBehavior.addObserver(self) { [weak self] errorMessage in
             guard let errorMessage else { return }
-            error(errorMessage)
+            DispatchQueue.main.async {
+                error(errorMessage)
+            }
         }
         errorObserved = true
         verifyMakeRequest()
@@ -57,28 +65,38 @@ public class ViewState<T, E>: ObserverProtocol {
     }
 
     private func postRequest() {
-        verifyCanMakeRequest.value = Any.self
+        stateQueue.async(flags: .barrier) {
+            self.verifyCanMakeRequest.value = Any.self
+        }
     }
 
     private func observerRequest() {
         verifyCanMakeRequest.addObserver(self) { [weak self] _ in
             guard let self else { return }
 
-            loading()
-            fetchSourceBehavior()
+            self.loading()
+            self.fetchSourceBehavior()
         }
     }
 
     private func loading() {
-        loadingBehavior.value = {}
+        stateQueue.async(flags: .barrier) {
+            self.loadingBehavior.value = {}
+        }
     }
 
     public func success(data: T) {
-        successBehavior.value = data
+        stateQueue.async(flags: .barrier) {
+            self.clearErrors()
+            self.successBehavior.value = data
+        }
     }
 
     public func error(error: E) {
-        errorBehavior.value = error
+        stateQueue.async(flags: .barrier) {
+            self.clearSuccess()
+            self.errorBehavior.value = error
+        }
     }
 
     func onValueChanged(_ value: Any?) {}
@@ -89,5 +107,13 @@ public class ViewState<T, E>: ObserverProtocol {
         } else if successObserved, errorObserved {
             postRequest()
         }
+    }
+
+    private func clearSuccess() {
+        successBehavior.value = nil
+    }
+
+    private func clearErrors() {
+        errorBehavior.value = nil
     }
 }
