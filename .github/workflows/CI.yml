@@ -9,36 +9,24 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Read Xcode version
-      id: xcode_version
-      run: echo "XCODE_VERSION=$(cat .xcode-version)" >> $GITHUB_ENV
-
-    - name: Setup Xcode using .xcode-version
-      uses: maxim-lobanov/setup-xcode@v1.6.0
+    - uses: maxim-lobanov/setup-xcode@v1.6.0
       with:
-        xcode-version: ${{ env.XCODE_VERSION }}
+        xcode-version: 15.4
         
     - name: Bundle install
       run: bundle install
-      
-    - name: Mise install
-      uses: jdx/mise-action@v2
-      with:
-        experimental: true
-        
-    - name: Generate project with tuist
-      run: |
-         tuist install
-         tuist generate --no-open
-      shell: bash
-
-    - name: Install xrun
-      run: |
-         brew tap heroesofcode/taps
-         brew install heroesofcode/taps/xrun
         
     - name: Run iOS tests
-      run: xrun workspace ViewState.xcworkspace ViewState 17.5 15 fail
+      run: make test-ios
+
+    - name: Run macOS tests
+      run: make test-macos
+
+    - name: Run tvOS tests
+      run: make test-tvos
+      
+    - name: Run watchOS tests
+      run: make test-watchos
 
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.13
