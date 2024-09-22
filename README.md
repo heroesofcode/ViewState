@@ -99,7 +99,7 @@ import PackageDescription
 let package = Package(
     name: "<Your Product Name>",
     dependencies: [
-       .package(url: "https://github.com/heroesofcode/ViewState", .upToNextMajor(from: "2.0.0"))
+       .package(url: "https://github.com/heroesofcode/ViewState", exact: "2.0.1")
     ],
     targets: [
         .target(

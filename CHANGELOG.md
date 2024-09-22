@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Version 2.0.1
+**2024-09-22**
+
+- Update MeilCli/danger-action action to v6.0.13 - #81 - @renovatebot
+- Update dependency jazzy to v0.15.2 - #83 - @renovatebot
+- Thread Safety for UI Updates - #84 - @joaolfp
+
 ## Version 2.0.0
 **2024-08-07**
 
