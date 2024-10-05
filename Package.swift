@@ -12,10 +12,13 @@ let package = Package(
             targets: ["ViewState"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/heroesofcode/DataLife", exact: "2.0.0")
+    ],
     targets: [
         .target(
             name: "ViewState",
-            dependencies: []
+            dependencies: ["DataLife"]
         ),
         .testTarget(
             name: "ViewStateTests",

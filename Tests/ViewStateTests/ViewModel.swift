@@ -1,9 +1,8 @@
 import Foundation
+import DataLife
 @testable import ViewState
 
 final class ViewModel {
-
-    var myName = Observable<String>(value: "João")
 
     private var viewState: ViewState<String, String>
 

@@ -1,18 +1,19 @@
 import Foundation
+import DataLife
 
 public class ViewState<T, E>: ObserverProtocol {
+    
+    public var id: UUID = UUID()
 
-    var id: Int = 123
-
-    private var successBehavior: Observable<T?> = Observable(value: nil)
-    private var loadingBehavior: Observable<() -> Void> = Observable(value: nil)
-    private var errorBehavior: Observable<E?> = Observable(value: nil)
+    private var successBehavior: DataLife<T?> = DataLife()
+    private var loadingBehavior: DataLife<() -> Void> = DataLife()
+    private var errorBehavior: DataLife<E?> = DataLife()
 
     private var successObserved = false
     private var loadingObserved = false
     private var errorObserved = false
 
-    private var verifyCanMakeRequest: Observable<Any?> = Observable(value: nil)
+    private var verifyCanMakeRequest: DataLife<Any?> = DataLife()
 
     private var fetchSourceBehavior: () -> Void = {}
 
@@ -30,8 +31,10 @@ public class ViewState<T, E>: ObserverProtocol {
                 success(data)
             }
         }
+        
         successObserved = true
         verifyMakeRequest()
+        
         return self
     }
 
@@ -42,6 +45,7 @@ public class ViewState<T, E>: ObserverProtocol {
                 loading()
             }
         }
+        
         loadingObserved = true
         verifyMakeRequest()
         return self
@@ -55,8 +59,10 @@ public class ViewState<T, E>: ObserverProtocol {
                 error(errorMessage)
             }
         }
+        
         errorObserved = true
         verifyMakeRequest()
+        
         return self
     }
 
@@ -99,7 +105,7 @@ public class ViewState<T, E>: ObserverProtocol {
         }
     }
 
-    func onValueChanged(_ value: Any?) {}
+    public func onValueChanged(_ value: Any?) {}
 
     private func verifyMakeRequest() {
         if successObserved, loadingObserved, errorObserved {

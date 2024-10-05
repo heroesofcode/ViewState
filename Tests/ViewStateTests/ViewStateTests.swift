@@ -1,4 +1,5 @@
 import XCTest
+import DataLife
 @testable import ViewState
 
 final class ViewStateTests: XCTestCase {
@@ -21,7 +22,9 @@ final class ViewStateTests: XCTestCase {
     }
 
     func testVerifyObserverNameWithSuccess() {
-        XCTAssertEqual(viewModel.myName.value, "João")
+        let myName = DataLife<String>()
+        myName.value = "João"
+        XCTAssertEqual(myName.value, "João")
     }
 
     func testVerifyFetchDatasWithSuccess() {
