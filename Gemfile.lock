@@ -147,7 +147,7 @@ GEM
     rake (13.2.1)
     rchardet (1.8.0)
     redcarpet (3.6.0)
-    rexml (3.3.8)
+    rexml (3.3.9)
     rouge (4.3.0)
     ruby-macho (2.5.1)
     sassc (2.4.0)
