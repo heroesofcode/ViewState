@@ -24,7 +24,7 @@ public class ViewState<T, E>: ObserverProtocol {
 
     @discardableResult
     public func successObserver(_ success: @escaping (T) -> Void) -> ViewState {
-        successBehavior.addObserver(self) { [weak self] data in
+        successBehavior.addObserver(self) { data in
             guard let data else { return }
             DispatchQueue.main.async {
                 success(data)
@@ -37,7 +37,7 @@ public class ViewState<T, E>: ObserverProtocol {
 
     @discardableResult
     public func loadingObserver(_ loading: @escaping () -> Void) -> ViewState {
-        loadingBehavior.addObserver(self) { [weak self] _ in
+        loadingBehavior.addObserver(self) { _ in
             DispatchQueue.main.async {
                 loading()
             }
@@ -49,7 +49,7 @@ public class ViewState<T, E>: ObserverProtocol {
 
     @discardableResult
     public func errorObserver(_ error: @escaping (E) -> Void) -> ViewState {
-        errorBehavior.addObserver(self) { [weak self] errorMessage in
+        errorBehavior.addObserver(self) { errorMessage in
             guard let errorMessage else { return }
             DispatchQueue.main.async {
                 error(errorMessage)
