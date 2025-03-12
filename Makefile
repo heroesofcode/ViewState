@@ -9,7 +9,7 @@ test-macos:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme ViewState \
-		-destination "platform=macOS,arch=x86_64,OS=15.0" \
+		-destination "platform=macOS" \
 		clean test | xcpretty
 
 test-tvos:
