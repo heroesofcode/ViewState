@@ -2,7 +2,7 @@ test-ios:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme ViewState \
-		-destination "platform=iOS Simulator,name=iPhone 15,OS=15.0" \
+		-destination "platform=iOS Simulator,name=iPhone 16,OS=18.0" \
 		clean test | xcpretty
 
 test-macos:
