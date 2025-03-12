@@ -1,5 +1,0 @@
-# Rules
---disable blankLinesAtStartOfScope
---disable trailingCommas
---disable unusedArguments
---disable wrapMultilineStatementBraces
