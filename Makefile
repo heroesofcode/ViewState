@@ -23,5 +23,5 @@ test-watchos:
 	set -o pipefail && \
 	xcodebuild test \
 		-scheme ViewState \
-		-destination "platform=watchOS Simulator,name=Apple Watch Series 9 (45mm),OS=11.0" \
+		-destination "platform=watchOS Simulator,name=Apple Watch Series 10 (46mm),OS=11.0" \
 		clean test | xcpretty
