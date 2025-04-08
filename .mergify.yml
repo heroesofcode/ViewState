@@ -11,9 +11,17 @@ pull_request_rules:
       merge:
         method: squash
 
-  - name: Be author's friend
+  - name: Automatic merges for Renovate pull requests
     conditions:
-      - author~=^joaolfp
+      - author~=^renovate\[bot\]$
+      - check-success=build
+    actions:
+      merge:
+        method: squash
+
+  - name: Automatic merges for joaolfp pull requests
+    conditions:
+      - author=joaolfp
       - check-success=build
     actions:
       merge:
