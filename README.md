@@ -4,13 +4,15 @@
 
 [![CI](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml/badge.svg)](https://github.com/heroesofcode/ViewState/actions/workflows/CI.yml)
 [![SPM compatible](https://img.shields.io/badge/SPM-compatible-brightgreen)](https://swift.org/package-manager/)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fheroesofcode%2FViewState%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/heroesofcode/ViewState)
-[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fheroesofcode%2FViewState%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/heroesofcode/ViewState)
 [![License](https://img.shields.io/github/license/joaolfp/ViewState.svg)](https://github.com/joaolfp/ViewState/blob/master/LICENSE)
 
 ## Overview
 
 A View State library to return the results for each state
+
+## Support
+
+iOS 15.0+ / macOS 12.0+ / tvOS 15.0+ / watchOS 7.0+
 
 ## Usage
 
@@ -99,19 +101,19 @@ import PackageDescription
 let package = Package(
     name: "<Your Product Name>",
     dependencies: [
-       .package(url: "https://github.com/heroesofcode/ViewState", exact: "2.0.1")
+       .package(
+           url: "https://github.com/heroesofcode/ViewState", 
+           exact: "2.0.1"
+        )
     ],
     targets: [
         .target(
             name: "<Your Target Name>",
-            dependencies: ["ViewState"]),
+            dependencies: ["ViewState"]
+        ),
     ]
 )
 ```
-
-## Contributing
-
-To contribute, just fork this project and then open a pull request, feel free to contribute, bring ideas and raise any problem in the issue tab.
 
 ## License
 
