@@ -99,19 +99,19 @@ import PackageDescription
 let package = Package(
     name: "<Your Product Name>",
     dependencies: [
-       .package(url: "https://github.com/heroesofcode/ViewState", exact: "2.0.1")
+       .package(
+           url: "https://github.com/heroesofcode/ViewState", 
+           exact: "2.0.1"
+        )
     ],
     targets: [
         .target(
             name: "<Your Target Name>",
-            dependencies: ["ViewState"]),
+            dependencies: ["ViewState"]
+        ),
     ]
 )
 ```
-
-## Contributing
-
-To contribute, just fork this project and then open a pull request, feel free to contribute, bring ideas and raise any problem in the issue tab.
 
 ## License
 
