@@ -16,7 +16,10 @@ public class ViewState<T, E>: ObserverProtocol {
 
     private var fetchSourceBehavior: () -> Void = {}
 
-    private let stateQueue = DispatchQueue(label: "viewState.queue", attributes: .concurrent)
+    private let stateQueue = DispatchQueue(
+        label: "viewState.queue",
+        attributes: .concurrent
+    )
 
     public init() {
         observerRequest()
@@ -99,7 +102,7 @@ public class ViewState<T, E>: ObserverProtocol {
         }
     }
 
-    func onValueChanged(_ value: Any?) {}
+    internal func onValueChanged(_ value: Any?) {}
 
     private func verifyMakeRequest() {
         if successObserved, loadingObserved, errorObserved {

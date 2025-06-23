@@ -1,8 +1,8 @@
 import Foundation
 
-class Observable<T> {
+final class Observable<T> {
 
-    typealias CompletionHandler = (T) -> Void
+    internal typealias CompletionHandler = (T) -> Void
 
     var value: T? {
         didSet {
@@ -10,7 +10,7 @@ class Observable<T> {
         }
     }
 
-    var observers: [Int: CompletionHandler] = [:]
+    private var observers: [Int: CompletionHandler] = [:]
 
     init(value: T?) {
         self.value = value
