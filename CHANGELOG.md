@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## Version 2.1.0
+**2025-07-17**
+
+- Update project to recent version (Xcode 16.4) - #111 - @joaolfp
+- visionOS Support - @joaolfp
+
 ## Version 2.0.1
 **2024-09-22**
 

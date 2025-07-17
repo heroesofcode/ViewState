@@ -12,7 +12,7 @@ A View State library to return the results for each state
 
 ## Support
 
-iOS 15.0+ / macOS 12.0+ / tvOS 15.0+ / watchOS 7.0+
+iOS 15.0+ / macOS 12.0+ / tvOS 15.0+ / watchOS 7.0+ / visionOS 1+
 
 ## Usage
 
@@ -103,7 +103,7 @@ let package = Package(
     dependencies: [
        .package(
            url: "https://github.com/heroesofcode/ViewState", 
-           exact: "2.0.1"
+           exact: "2.1.0"
         )
     ],
     targets: [
