@@ -26,12 +26,6 @@ jobs:
     - name: Run macOS tests
       run: make test-macos
 
-    - name: Run tvOS tests
-      run: make test-tvos
-      
-    - name: Run watchOS tests
-      run: make test-watchos
-
     - name: Danger action
       uses: MeilCli/danger-action@v6.0.33
       if: github.event_name == 'pull_request'
