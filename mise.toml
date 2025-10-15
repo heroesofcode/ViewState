@@ -1,5 +1,0 @@
-[tools]
-swiftlint = "0.59.1"
-
-[tasks.swiftlint]
-run = "swiftlint"

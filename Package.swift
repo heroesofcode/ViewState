@@ -3,6 +3,8 @@
 
 import PackageDescription
 
+let useSwiftLint = false
+
 let package = Package(
     name: "ViewState",
     platforms: [
@@ -18,10 +20,16 @@ let package = Package(
             targets: ["ViewState"]
         )
     ],
+    dependencies: useSwiftLint ? [
+        .package(url: "https://github.com/lukepistrol/SwiftLintPlugin", from: "0.61.0")
+    ] : [],
     targets: [
         .target(
             name: "ViewState",
-            dependencies: []
+            dependencies: [],
+            plugins: useSwiftLint ? [
+                .plugin(name: "SwiftLint", package: "SwiftLintPlugin")
+            ] : []
         ),
         .testTarget(
             name: "ViewStateTests",
