@@ -17,11 +17,8 @@ jobs:
         with:
           xcode-version: ${{ env.XCODE_VERSION }}
 
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@ac793fdd38cc468a4dd57246fa9d0e868aba9085
-        with:
-          ruby-version: '3.3'
-          bundler-cache: true
+      - name: Bundle install
+        run: bundle install
 
       - name: Run iOS tests
         run: make test-ios
