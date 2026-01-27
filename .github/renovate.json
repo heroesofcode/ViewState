@@ -5,7 +5,7 @@
   "packageRules": [
     {
       "groupName": "all dependencies",
-      "automerge": false,
+      "automerge": true,
       "matchPackageNames": [
         "*"
       ]
