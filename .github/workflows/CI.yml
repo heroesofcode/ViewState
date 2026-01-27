@@ -27,7 +27,7 @@ jobs:
         run: make test-macos
 
       - name: Danger action
-        uses: MeilCli/danger-action@df49a6bbbf30317905347f4e427af4b5371d87df
+        uses: MeilCli/danger-action@d7ecd785d33dbc3c91e76dd7441be2f92785bcda
         if: github.event_name == 'pull_request'
         with:
           plugins_file: 'Gemfile'
