@@ -38,7 +38,7 @@ jobs:
           DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@75cd11691c0faa626561e295848008c8a7dddffe
+        uses: codecov/codecov-action@f67d33dda8a42b51c42a8318a1f66468119e898b
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
