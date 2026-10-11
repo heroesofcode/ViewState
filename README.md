@@ -1,3 +1,7 @@
+> [!WARNING]
+> This project is no longer maintained.  
+> If you want to continue using ViewState, feel free to fork the repository and maintain your own version.
+
 <p align="center">
     <img src="https://github.com/heroesofcode/ViewState/blob/master/assets/logo.png?raw=true">
 </p>
